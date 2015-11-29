@@ -1,0 +1,675 @@
+@charset "UTF-8";
+html {
+  display: block;
+  -ms-touch-action: none;
+  font-size: 10px;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  font-size: 1.6rem; }
+
+/*================== 样式重置 ======================== */
+body, p, ul, ol, li, h1, h2, h3, dl, dt, dd {
+  margin: 0;
+  padding: 0; }
+
+h2 {
+  font-size: 100%; }
+
+ul, dl, ol {
+  list-style: none; }
+
+em {
+  font-style: normal; }
+
+img {
+  border: 0 none; }
+
+img {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top; }
+
+body {
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: 100% !important;
+  font-family: Helvetica; }
+
+a, button, input, img {
+  -webkit-touch-callout: none; }
+
+input, select, textarea {
+  outline: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a, button, input {
+  -webkit-tap-highlight-color: transparent; }
+
+@media all and (-webkit-transform-3d) {
+  a, button, input {
+    -webkit-tap-highlight-color: rgba(130, 130, 130, 0.52); } }
+html, body {
+  height: 100%; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+/*！====以上是reset样式======*/
+input, label {
+  vertical-align: middle; }
+
+input, textarea {
+  outline: none; }
+
+/*!===实现用户精准选择复制====*/
+.no-copy {
+  -webkit-user-select: none; }
+
+.no-copy {
+  -webkit-touch-callout: none; }
+
+.text-copy {
+  -webkit-user-select: text;
+  user-select: text; }
+
+/*！====清除浮动=====*/
+.clearfix {
+  zoom: 1; }
+
+.clearfix:after {
+  content: ' ';
+  display: block;
+  clear: both;
+  visibility: hidden; }
+
+/*!=====公用样式======*/
+.focus-yellow {
+  color: #FFFF66; }
+
+/*! ====index.html===*/
+.wrapper-1 {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #FFF;
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  background: transparent url(../images/bg.jpg) 0 0 no-repeat;
+  background-size: cover;
+  overflow: hidden; }
+
+.logo {
+  padding-top: 1.6rem;
+  padding-left: 1.5rem;
+  margin: 0 auto;
+  width: 100%;
+  height: 1.5rem; }
+  .logo .share-telecom {
+    display: inline-block;
+    background: url(../images/share.png) no-repeat;
+    background-size: 26.3rem 74.5rem;
+    height: 1.5rem;
+    width: 5.3rem;
+    background-position: -7.3rem 0; }
+  .logo .vertical-line {
+    position: relative;
+    top: -0.1rem;
+    left: 0.3rem;
+    height: 1.3rem;
+    width: 0.1rem;
+    display: inline-block;
+    background-color: #FFFFFF; }
+  .logo .share-wepay {
+    display: inline-block;
+    margin-left: 0.6rem;
+    background: url(../images/share.png) no-repeat;
+    background-size: 26.3rem 74.5rem;
+    height: 1.5rem;
+    width: 7.0rem;
+    background-position: 0 0; }
+
+.main-shape {
+  width: 100%; }
+  .main-shape .share-iPhonesl {
+    position: absolute;
+    top: 7.5rem;
+    left: 50%;
+    height: 15.8rem;
+    width: 23.8rem;
+    margin-left: -12rem;
+    background: url(../images/share.png) no-repeat;
+    background-size: 26.3rem 74.5rem;
+    height: 15.8rem;
+    width: 23.8rem;
+    background-position: 0 -19.7rem;
+    z-index: 2; }
+  .main-shape .share-triangles {
+    position: absolute;
+    top: 5.8rem;
+    left: 50%;
+    height: 30rem;
+    width: 26.3rem;
+    margin-left: -13.6rem;
+    background: url(../images/share.png) no-repeat;
+    background-size: 26.3rem 74.5rem;
+    height: 29.9rem;
+    width: 26.3rem;
+    background-position: 0 -44.2rem;
+    z-index: 3; }
+  .main-shape .share-big6 {
+    position: absolute;
+    top: 7.6rem;
+    left: 50%;
+    height: 15.5rem;
+    width: 10.4rem;
+    margin-left: -5.3rem;
+    background: url(../images/share.png) no-repeat;
+    background-size: 26.3rem 74.5rem;
+    height: 15.5rem;
+    width: 10.4rem;
+    background-position: 0 -1.7rem;
+    z-index: 4; }
+
+.description {
+  width: 100%;
+  height: 7.4rem;
+  margin: 21rem auto 0; }
+  .description h2 {
+    font-size: 3.2rem;
+    height: 3.2rem;
+    width: 26.6rem;
+    text-align: center;
+    margin: 0 auto; }
+  .description p:nth-of-type(1) {
+    margin-bottom: .9rem; }
+  .description p {
+    text-align: center;
+    width: 24.8rem;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    line-height: 2.8rem; }
+
+.share-tips {
+  display: block;
+  margin-top: 2.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25.2rem;
+  height: 1.4rem;
+  background: url(../images/share.png) no-repeat;
+  background-size: 26.3rem 74.5rem;
+  height: 1.5rem;
+  width: 25.2rem;
+  background-position: 0 -17.5rem; }
+
+.share-flexible-arrow {
+  position: absolute;
+  top: 35.5rem;
+  left: 50%;
+  height: 1.4rem;
+  width: 0.9rem;
+  margin-left: 12.9rem;
+  background: url(../images/share.png) no-repeat;
+  background-size: 26.3rem 74.5rem;
+  height: 1.3rem;
+  width: .95rem;
+  background-position: -12.9rem 0; }
+
+/*!=====按钮模块======*/
+.at-button {
+  margin-top: 1.7rem;
+  width: 100%;
+  height: 10.5rem;
+  font-size: 1.8rem; }
+  .at-button a.book, .at-button a.lottery {
+    margin: 0 auto;
+    text-align: center;
+    -moz-border-radius: 2.1rem;
+    -webkit-border-radius: 2.1rem;
+    border-radius: 2.1rem; }
+  .at-button a.book {
+    display: block;
+    width: 78.125%;
+    height: 42px;
+    line-height: 42px;
+    background-color: #FFDE47;
+    color: #3D4231; }
+  .at-button a.lottery {
+    display: block;
+    width: 78.125%;
+    height: 40px;
+    border: .1rem solid #E5E5E5;
+    background-color: transparent;
+    color: #FFFFFF;
+    margin-top: 2.1rem;
+    line-height: 42px; }
+
+/*!======活动说明模块=========*/
+.at-detail {
+  width: 100%;
+  margin: 5.4rem auto  0;
+  color: #FFFFFF; }
+  .at-detail .at-detail-title {
+    display: block;
+    margin-left: 1.5rem;
+    font-size: 1.4rem; }
+  .at-detail .at-detail-des {
+    font-size: 1.3rem;
+    display: block;
+    width: 100%;
+    height: 31.2rem;
+    margin-left: 1.5rem; }
+  .at-detail li {
+    padding-left: 1.5rem;
+    padding-right: 3rem;
+    line-height: 1.8rem;
+    text-indent: -.7rem; }
+  .at-detail li:nth-of-type(1) {
+    margin-top: 1.6rem; }
+  .at-detail li:nth-of-type(6) {
+    padding-bottom: 4.1rem; }
+  .at-detail li .list-style {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding-right: .3rem; }
+
+/*! =================页面2 prebook.html CSS样式==========================*/
+/*!====1.身份证号和手机号要用js进行验证========2.选择城市的js代码暂时还不会使用=====*/
+.wrapper-2 {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #FFF;
+  background: #fff url(../images/share/dotbgsmall.png) 0 0 repeat;
+  font-size: 13px;
+  background-size: 26px 24px; }
+
+.filltobook, .tips {
+  color: #B4B4B4; }
+
+.filltobook {
+  display: block;
+  width: 320px;
+  height: 44px;
+  margin: 0 auto;
+  line-height: 44px;
+  padding-left: 16px; }
+
+.form-1 {
+  font-size: 16px;
+  width: 320px;
+  height: 132px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC; }
+  .form-1 input {
+    border: 0px solid #c00;
+    font-size: 16px; }
+
+.info {
+  display: block;
+  width: auto;
+  height: 44px;
+  margin-left: 15px;
+  line-height: 44px;
+  color: #999; }
+
+.input-info {
+  color: #333;
+  margin-left: 15px; }
+
+.horizon-line {
+  display: block;
+  width: 305px;
+  height: 1px;
+  background-color: #CCC;
+  margin-left: 15px; }
+
+.form-2 {
+  width: 320px;
+  height: 88px;
+  margin: 21px auto 27px;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  background-color: #FFFFFF;
+  font-size: 16px; }
+
+/*选择城市*/
+.select-city {
+  display: inline-block;
+  width: 71px;
+  height: 30px;
+  position: relative;
+  background-color: #FFFFFF;
+  color: black; }
+
+/*a链接里的span cur-select的样式设置*/
+.select-city .cur-select-city {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  height: 30px;
+  width: 71px;
+  line-height: 30px;
+  /*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。*/
+  background: transparent url(../images/share/ico-arrow.png) no-repeat 59px center;
+  -webkit-background-size: 8px;
+  background-size: 8px;
+  text-indent: 10px; }
+
+/*链接被点击的时候，背景颜色变成白色*/
+.select-city:hover .cur-select-city {
+  background-color: #FFFFFF;
+  /*默认为白色背景*/ }
+
+/*对select元素样式设置，主要在于隐藏select元素*/
+.select-city select {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  height: 30px;
+  width: 71px;
+  opacity: 0;
+  font-size: 16px;
+  color: black; }
+
+.vertical-line {
+  position: relative;
+  top: 6px;
+  left: 14px;
+  height: 30px;
+  width: 1px;
+  display: inline-block;
+  background-color: #CCC;
+  z-index: 3; }
+
+/*选择区域*/
+.select-distinct {
+  position: relative;
+  top: auto;
+  left: auto;
+  height: 30px;
+  width: 218px;
+  display: inline-block;
+  background-color: #FFFFFF;
+  color: black; }
+
+.select-distinct .cur-select-distinct {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  height: 30px;
+  width: 218px;
+  line-height: 30px;
+  /*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。 */
+  background: url(../images/share/ico-arrow.png) no-repeat 206px center;
+  -webkit-background-size: 8px auto;
+  background-size: 8px auto;
+  text-indent: 10px; }
+
+/*对select元素样式设置，主要在于隐藏select元素*/
+.select-distinct select {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  height: 30px;
+  width: 218px;
+  opacity: 0;
+  font-size: 16px;
+  color: black; }
+
+.select-distinct:hover .cur-select-distinct {
+  background-color: #FFFFFF;
+  /*默认为白色背景*/ }
+
+.form-2-horizon-line {
+  position: relative;
+  top: 9px;
+  left: 15px;
+  height: 1px;
+  width: 305px;
+  background-color: #CCC; }
+
+.particular-address {
+  position: relative;
+  top: 22px;
+  left: 14px;
+  height: 31px;
+  width: 286px; }
+
+.particular-address input {
+  display: block;
+  width: 286px;
+  height: 16px;
+  line-height: 18px;
+  border: 0px solid #c00;
+  font-size: 16px; }
+
+.confirm-btn {
+  display: block;
+  width: 293px;
+  height: 40px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #1A9D18;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 40px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #06BA04), color-stop(1, #06BF04)); }
+  .confirm-btn input {
+    color: #FFFFFF;
+    border: 0px solid #c00;
+    font-size: 18px;
+    background-color: transparent; }
+
+.tips {
+  display: block;
+  width: 143px;
+  height: 12px;
+  line-height: 12px;
+  margin: 14px auto 0;
+  padding-bottom: 109px;
+  text-align: center;
+  font-size: 12px; }
+
+/*!=====页面3 prebook-detail.html  CSS=============*/
+.wrapper-3 {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #FFF;
+  background: transparent url(../images/share/dotbgsmall.png) 0 0 repeat;
+  padding-top: 17px;
+  background-size: 26px 24px;
+  font-size: 12px; }
+
+.success {
+  width: 320px;
+  height: 412px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC; }
+  .success .success-sign {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-left: 27px;
+    margin-top: 17px;
+    background: #06BE04 url("../images/share/hook.png") 50% 50% no-repeat;
+    background-size: 22px auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 3; }
+  .success .success-des {
+    display: block;
+    width: 160px;
+    height: 35px;
+    margin-left: 91px;
+    margin-top: -34px; }
+  .success .success-des > p:nth-of-type(1) {
+    padding-left: 2px;
+    font-size: 16px;
+    line-height: 16px; }
+  .success .success-des > p:nth-of-type(2) {
+    padding-top: 7px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #A3A3A3; }
+
+.h-line {
+  display: block;
+  width: 290px;
+  height: 1px;
+  background-color: #CCC; }
+
+.hl-1 {
+  display: block;
+  margin-top: 19px;
+  margin-left: 15px;
+  margin-bottom: -5px; }
+
+.basic-info {
+  width: 300px;
+  height: auto;
+  margin: 18px auto 0px 15px;
+  font-size: 14px; }
+  .basic-info li {
+    display: inline;
+    line-height: 24px; }
+  .basic-info ul > li:nth-of-type(1) {
+    color: #AAA; }
+  .basic-info ul > li:nth-of-type(2) {
+    margin-left: 7px; }
+  .basic-info ul:nth-of-type(4) > li:nth-of-type(2) {
+    display: inline-block;
+    width: 196px;
+    height: 37px; }
+  .basic-info ul:nth-of-type(4) > li:nth-of-type(1) {
+    display: inline-block;
+    vertical-align: top; }
+  .basic-info .ls {
+    letter-spacing: 1px; }
+  .basic-info .hl-2 {
+    margin: 15px auto 14px 0px;
+    background-color: #CCC; }
+
+/*!=========进度状态==========*/
+.progress {
+  position: relative;
+  margin-top: 0;
+  margin-left: 85px;
+  width: 220px;
+  height: 142px;
+  font-size: 12px; }
+
+.v-line {
+  position: absolute;
+  top: 10px;
+  left: -24px;
+  height: 129px;
+  width: 1px;
+  background-color: #CCC;
+  z-index: 2; }
+
+.pd-1, .pd-2, .pd-3, .pd-4 {
+  position: absolute;
+  top: auto;
+  left: -26px;
+  height: 5px;
+  width: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #CCC;
+  z-index: 3; }
+
+.pd-1 {
+  top: 6px; }
+
+.pd-2 {
+  top: 54px; }
+
+.pd-3 {
+  top: 85px; }
+
+.pd-4 {
+  top: 134px; }
+
+.active {
+  color: #06BE04 !important;
+  font-weight: bold; }
+
+.progress li {
+  display: block;
+  line-height: 18px;
+  color: #CCC;
+  margin-top: 12px; }
+
+.progress li:nth-of-type(1) {
+  margin-top: 15px !important; }
+
+.progress li:nth-of-type(1) span {
+  color: #CCC; }
+
+.active-dot {
+  background-color: #06BE04; }
+
+.btn {
+  padding-bottom: 16px; }
+
+.confirm-btn-3 {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  width: 293px;
+  height: 40px;
+  font-size: 18px;
+  color: white;
+  line-height: 40px;
+  margin: 18px auto 0;
+  text-align: center;
+  border: 1px solid #1A9D18;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #06BA04), color-stop(1, #06BF04)); }
+
+@media screen and (min-width: 321px) and (max-width: 479px) {
+  html {
+    font-size: 12px; } }
+@media screen and (min-width: 480px) and (max-width: 639px) {
+  html {
+    font-size: 15px; } }
+@media screen and (min-width: 640px) and (max-width: 719px) {
+  html {
+    font-size: 20px; } }
+@media screen and (min-width: 720px) and (max-width: 749px) {
+  html {
+    font-size: 22.5px; } }
+@media screen and (min-width: 750px) and (max-width: 799px) {
+  html {
+    font-size: 23.5px; } }
+@media screen and (min-width: 800px) and (max-width: 959px) {
+  html {
+    font-size: 25px; } }
+@media screen and (min-width: 960px) and (max-width: 1079px) {
+  html {
+    font-size: 30px; } }
+@media screen and (min-width: 1080px) {
+  html {
+    font-size: 32px; } }

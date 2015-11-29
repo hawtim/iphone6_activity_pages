@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iPhone6马上到手</title>
+	<!-- viewport模板 -->
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="HandheldFriendly" content="true">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="Title" content="iPhone6马上到手">
+    <meta name="Keywords" content="iPhone6,中国电信,微信支付">
+    <meta name="Description" content="iPhone6·马上到手,仅需预付888元，上市后补足余款后即可">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-title" content="iPhone6马上到手">
+	<script>
+	document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+	</script>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<!-- 设置背景 -->
+	<div class="wrapper-2 no-copy">
+		<h2 class="filltobook"><em>请完善个人信息进行预订</em></h2>
+		<!-- 基本信息表格 -->
+		<form class="form-1" id="form1" action="#" onsubmit="return validate_form(this)" method="post">
+			<!-- 输入姓名 -->
+			<span class="info" id="username">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名
+			<!-- <span class="input-info"><em></em></span> -->
+			<input class="input-info" id="userText" type="text" name="usertext" placeholder="周航">
+			</span>
+			<!-- <br> -->
+			<div class="horizon-line"></div>
+			<!-- 输入身份证号 -->
+			<span class="info" id="idcode" >身份证号
+			<!-- <span class="input-info"><em></em></span> -->
+			<input class="input-info" id="userId" type="text" placeholder="440535642000023259">
+			</span>
+			<!-- <br> -->
+			<div class="horizon-line"></div>
+			<!-- 输入联系电话 -->
+			<span class="info" id="phone">联系电话
+			<!-- <span class="input-info"><em></em></span> -->
+			<input class="input-info"  id="userPhone" type="text"  onKeyUp="value=value.replace(/\D/g,'')" onafterpaste="value=value.replace(/\D/g,'')" placeholder="13588888888">
+			</span>
+		</form>
+		<!-- 送货地址表格 -->
+		<form class="form-2" id="form2" action="#" onsubmit="return validate_form(this)" method="post">
+			<a class="select-city" id="select-city">
+			<span class="cur-select-city">上海</span>
+			<select>
+			<option>上海</option>
+			<option>北京</option>
+			<option>深圳</option>
+			<option>广州</option>
+			<option>珠海</option>
+			</select>
+			</a>
+			<div class="vertical-line"></div>
+			<a class="select-distinct" id="select-distinct">
+				<span class="cur-select-distinct">崇明区</span>
+				<select>
+				<option>崇明区</option>
+				<option>黄浦区</option>
+				<option>卢湾区</option>
+				<option>徐汇区</option>
+				<option>长宁区</option>
+				</select>
+			</a>
+			<div class="form-2-horizon-line"></div>
+			<div class="particular-address" id="address">
+				<input type="text"  id="userAddress" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]/g,'')" placeholder="请输入详细的送货地址">
+			</div>
+		</form>
+		<!-- 确认支付 -->
+		<div class="confirm-btn">
+			<a href="prebook-detail.html">
+				<input type="submit" value="确定并支付888元">
+			</a>
+		</div>
+		<!-- 付款提示 -->
+		<span class="tips">支持随时退款</span>
+		<!-- <img src="../images/finished/prebook.jpg" width="100%" height="" alt="预订支付"> -->
+		<!-- <span class="fix">&nbsp;</span> -->
+	</div>
+<script src="../javascript/page2certificate.js"></script>
+</body>
+</html>

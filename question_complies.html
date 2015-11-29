@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>问题汇总ver1.2</title>
+	<style type="text/css">
+	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+html {
+  line-height: 1; }
+  ol,ul{
+  	list-style:none;
+  }
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+q, blockquote {
+  quotes: none; }
+   q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+a img {
+  border: none; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+html {
+  cursor: url("http://ued.taobao.com/blog/wp-content/themes/taobaoued/images/cursor.ico"), auto; }
+body {
+    background-image: url(data:image/png;base64,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);
+    background-color: #ccc;
+}
+body{color:black;
+	font-family:"Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+
+.wrap{
+	width:960px;
+	margin:0 auto;
+}
+.wrap>h2{font-size: 24px ;text-align: center;padding-top: 40px;font-weight: bold;}
+.wrap>h2>span{font-size: 16px;}
+.program1, .program2{
+	border:2px dashed white;
+	width:415px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	top: 50px;
+	left:0;
+	margin:0px 15px;
+	padding:0 15px;
+}
+.program1{display: hidden;}
+ol>li{font-size:18px;font-weight: bold;}
+.common h2{ font-size: 20px;color:#268dcd;font-weight: bold;}
+span.page{font-size:18px; color:#268dcd;display: block;margin:10px 0;}
+span.answer{font-size:18px;display: block;padding: 30px 0;text-indent: 36px;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<h2>项目问题汇总<span>——hawtim</span></h2>
+	<div class="common program1">
+		<h2>项目开始前分析疑问11.9</h2>
+		<span class="page">主页面的问题</span>
+		<ol>
+			<li>这个项目在实际中是不是用雪碧图？我想着反正是要会的，想要用compass生成</li>
+			<span class="answer">按照自己的思路来做</span>
+			<li>页面是否需要响应式？</li>
+			<span class="answer">如果你懂怎么适配页面，可以做。如果不熟悉，那你这一期你先只做一套尺寸，也就是不需要响应式</span>
+			<li>“每个微信号只能参与“预订”和“抽奖”其中一项”这段文字使用方正蕾体简体Regular，手机端是否内置这种字体，如果没有的话，是要用@font-face实现还是用图片实现？</li>
+			<span class="answer">手机全部使用系统默认字体</span>
+			<li>6字周围的小三角是否有动起来的需求？</li>
+			<span class="answer">先把页面基本布局做好，看完成后时间是否充裕，多则可以做动画，没有也罢</span>
+		</ol>
+		<span class="page">填写信息页面的问题</span>
+		<ol>
+			<li>固定长度的分割线的实现方式我没想懂，有一些思路。
+				1.通过div+border实现<br>
+				2.通过span+下划线实现<br>
+				3.竖直用line-height+|实现</li>
+			<span class="answer">一个空div，设置分割线宽度和高度，然后添加背景色，用绝对定位固定下就行</span>
+			<li>关于带斑点的背景图，里面的斑点是不规律的好像，是否可以裁成高度比较短的背景图然后用repeat-y实现？</li>
+			<span class="answer">截取一大块出来100px*100px，然后repeat下就行（记得background-size:50px 50px，高清屏的原因，都要除以2）</span>
+			<li>字体用Helvetica Neue Roman是否需要特别指定？因为最后带了个Roman的样式</li>
+			<span class="answer">手机全部使用系统默认字体</span>
+		</ol>
+		<span class="page">完成支付页面</span>
+		<ol>
+			<li>一套三张图，CSS是实现3个页面3份?<br>还是一份用在三套里?<br>在从页面A跳转到页面B的时候，CSS文档要不要请求服务端重新加载还是已经在缓存里实现了？</li>
+			<span class="answer">必须公用一套css，本来就是3个关联页面</span>
+		</ol>
+	</div>
+	<div class="common program2">
+		<h2>项目布局完成后问题——11.14</h2>
+		<span class="page">全套图大问题</span>
+		<ol>
+			<li>响应式、rem自适应@media screen (max-width:320px)</li>
+			<span class="answer">关于响应式的问题，只能说比较复杂，一时难以跟你讲清楚，今天补充几句，之前叫你按照视觉稿的宽度来写页面，其实是不想让一开始就接触得很复杂。其实不管什么视觉稿，页面宽度一般都不会写固定，也就是说正常情况下不会用width:320px的写法，而是width:100%<br>
+			手机端页面的布局十分灵活，例如前景图大banner，可以直接写出&lt;img src="img/banner.jpg" width="100%"  /&gt;<br>
+			可参考：
+			http://action.weixin.qq.com/payact/readtemplate?t=mobile/merchant/project_offspanne_school_tmpl <br>
+			目前响应式流行的写法是rem+media，给你个rem+media的响应式参考实例，必须用chrome的移动设备模式打开~希望能看懂，考验你能力的时候</span>
+			<li>雪碧图的大小是固定的，在不用适配高清屏的页面中还能使用，在该套图中尝试的时候，确实是能够将雪碧图显示出来，但是由于适配高清屏将尺寸变为原来的二分之一，而设置background-size:50%变成背景图为span元素的宽度的一半</li>
+			<span class="answer">background-size百分比的写法，是按照占据父级宽度或者高度来计算的，跟直接写成px的单位定义还是有差别.<br>具体可以百度了解下它的使用方法
+			雪碧图这块你还是得学习下，可参考这个页面<br>
+			http://action.weixin.qq.com/payact/readtemplate?t=mobile/merchant/abispanty_daijinquan_tmpl</span>
+			<li>使用compass写SCSS，语法不熟悉，基本都是css语法，听说compass停止更新比较久了</li>
+			<span class="answer">无关紧要，SCSS是辅助的“工具”而已，现在是学基础，工具不要看得太重，后续再学</span>
+			<li>整体的布局脆弱，有些地方尺寸把握不好，偏差1px</li>
+			<span class="answer">问题不大，慢慢来，有时候1px的偏差并不是你的原因，也可能是视觉稿的奇数尺寸引起的，例如13像素除以2之后是6.5像素，有些浏览器会做四舍五入</span>
+		</ol>
+		<span class="page">想了解的问题</span>
+		<ol>
+			<li>slide.js滑屏框架其中一个功能就是朋友圈那些H5宣传动画么？</li>
+			<span class="answer">不是，滑屏框架现在网络上很多，有些公司都是自己写框架的，当然你可以直接使用别人写的框架。</span>
+			<li>如果想实现主页面的三角形跳动效果，是否需要将每一小块切图并针对每一块做处理？</li>
+			<span class="answer">方法很多，你说的切一块出来做处理也是可以，也有通过雪碧图定位出一个背景做处理
+			动画学习可参考http://isux.tencent.com/css3/index.html</span>
+		</ol>
+		<span class="page">主页面的问题</span>
+		<ol>
+			<li>(已解决)原本使用占位符实现换行后缩进，现在在左边用padding空开，再用text-indext把第一行收回来</li>
+		</ol>
+		<span class="page" >填写信息页面的问题</span>
+		<ol>
+			<li>js验证信息正确性，姓名应该就不用验证了，已经找到相关js代码，但对js的了解还是不够深入不会使用</li>
+			<span class="answer">JS先可以先放宽，了解即可，暂不做要求</span>
+			<li>使用了a+span+select+js 实现下拉菜单效果</li>
+		</ol>
+		<span class="page">完成支付页面</span>
+		<ol>
+			<li>进度圆点的宽度为5px，（按照设计稿的话为6px）因为中间有准确穿过一像素的直线所以直径要为奇数。</li>
+			<span class="answer">这个解决方法可以</span>
+			<li>发现在魅蓝note1上查看里面有的两个电话的字体都变大了，不知是不是系统设置让检测到的11位电话号码都变大，但是viewport中已经进行不检测电话号码的声明了，在苹果5s和ipad2（系统均为ios9）中均不会有该效果</li>
+			<span class="answer">属于正常现象，检测电话号码的声明有部分android系统是不支持的，你可以给该标签定义下字体大小</span>
+			<li>最后补充</li>
+			<span class="answer">页面基本使用绝对定位布局，绝对定位的元素灵活性和可拓展性比较差的。<br>
+			要尝试用静态（不使用任何定位）布局还有浮动布局，绝对定位是用在固定个别元素的位置</span>
+		</ol>
+	</div>
+	</div>
+</body>
+</html>
