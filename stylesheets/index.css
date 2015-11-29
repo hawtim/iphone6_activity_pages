@@ -107,150 +107,151 @@ input, textarea {
   overflow: hidden; }
 
 .logo {
-  padding-top: 1.6rem;
-  padding-left: 1.5rem;
+  padding-top: 1.28rem;
+  padding-left: 1.2rem;
   margin: 0 auto;
   width: 100%;
-  height: 1.5rem; }
+  height: 1.2rem; }
   .logo .share-telecom {
     display: inline-block;
     background: url(../images/share.png) no-repeat;
-    background-size: 26.3rem 74.5rem;
-    height: 1.5rem;
-    width: 5.3rem;
-    background-position: -7.3rem 0; }
+    background-size: 21.04rem auto;
+    height: 1.2rem;
+    width: 4.32rem;
+    background-position: -5.84rem 0; }
   .logo .vertical-line {
     position: relative;
     top: -0.1rem;
-    left: 0.3rem;
-    height: 1.3rem;
+    left: 0.24rem;
+    height: 1.04rem;
     width: 0.1rem;
     display: inline-block;
     background-color: #FFFFFF; }
   .logo .share-wepay {
     display: inline-block;
-    margin-left: 0.6rem;
+    margin-left: 0.48rem;
     background: url(../images/share.png) no-repeat;
-    background-size: 26.3rem 74.5rem;
-    height: 1.5rem;
-    width: 7.0rem;
+    background-size: 21.04rem auto;
+    height: 1.2rem;
+    width: 5.6rem;
     background-position: 0 0; }
 
 .main-shape {
   width: 100%; }
   .main-shape .share-iPhonesl {
     position: absolute;
-    top: 7.5rem;
+    top: 6rem;
     left: 50%;
-    height: 15.8rem;
-    width: 23.8rem;
-    margin-left: -12rem;
+    height: 12.64rem;
+    width: 19.04rem;
+    margin-left: -9.6rem;
     background: url(../images/share.png) no-repeat;
-    background-size: 26.3rem 74.5rem;
-    height: 15.8rem;
-    width: 23.8rem;
-    background-position: 0 -19.7rem;
+    background-size: 21.04rem auto;
+    height: 12.64rem;
+    width: 19.04rem;
+    background-position: 0 -15.76rem;
     z-index: 2; }
   .main-shape .share-triangles {
     position: absolute;
-    top: 5.8rem;
+    top: 4.64rem;
     left: 50%;
-    height: 30rem;
-    width: 26.3rem;
-    margin-left: -13.6rem;
+    height: 24rem;
+    width: 21.04rem;
+    margin-left: -10.88rem;
     background: url(../images/share.png) no-repeat;
-    background-size: 26.3rem 74.5rem;
-    height: 29.9rem;
-    width: 26.3rem;
-    background-position: 0 -44.2rem;
+    background-size: 21.04rem auto;
+    height: 23.92rem;
+    width: 21.04rem;
+    background-position: 0 -35.36rem;
     z-index: 3; }
   .main-shape .share-big6 {
     position: absolute;
-    top: 7.6rem;
+    top: 6.08rem;
     left: 50%;
-    height: 15.5rem;
-    width: 10.4rem;
-    margin-left: -5.3rem;
+    height: 12.4rem;
+    width: 8.32rem;
+    margin-left: -4.24rem;
     background: url(../images/share.png) no-repeat;
-    background-size: 26.3rem 74.5rem;
-    height: 15.5rem;
-    width: 10.4rem;
-    background-position: 0 -1.7rem;
+    background-size: 21.04rem auto;
+    height: 12.4rem;
+    width: 8.32rem;
+    background-position: 0 -1.36rem;
     z-index: 4; }
 
 .description {
   width: 100%;
-  height: 7.4rem;
-  margin: 21rem auto 0; }
+  height: 5.92rem;
+  margin: 16.8rem auto 0; }
   .description h2 {
     font-size: 3.2rem;
     height: 3.2rem;
+    line-height: 3.2rem;
     width: 26.6rem;
     text-align: center;
     margin: 0 auto; }
   .description p:nth-of-type(1) {
-    margin-bottom: .9rem; }
+    margin-bottom: 0.72rem; }
   .description p {
     text-align: center;
-    width: 24.8rem;
+    width: 25.2rem;
     margin: 0 auto;
     font-size: 1.4rem;
-    line-height: 2.8rem; }
+    line-height: 2.24rem; }
 
 .share-tips {
   display: block;
-  margin-top: 2.8rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25.2rem;
-  height: 1.4rem;
+  margin: 2.24rem auto 0;
   background: url(../images/share.png) no-repeat;
-  background-size: 26.3rem 74.5rem;
-  height: 1.5rem;
-  width: 25.2rem;
-  background-position: 0 -17.5rem; }
+  background-size: 21.04rem auto;
+  height: 1.2rem;
+  width: 20.16rem;
+  background-position: 0 -14rem; }
 
 .share-flexible-arrow {
   position: absolute;
-  top: 35.5rem;
+  top: 28.4rem;
   left: 50%;
-  height: 1.4rem;
-  width: 0.9rem;
-  margin-left: 12.9rem;
+  height: 1.12rem;
+  width: 0.72rem;
+  margin-left: 10.32rem;
   background: url(../images/share.png) no-repeat;
-  background-size: 26.3rem 74.5rem;
-  height: 1.3rem;
-  width: .95rem;
-  background-position: -12.9rem 0; }
+  background-size: 21.04rem auto;
+  height: 1.04rem;
+  width: 0.76rem;
+  background-position: -10.32rem 0; }
 
 /*!=====按钮模块======*/
 .at-button {
-  margin-top: 1.7rem;
+  margin-top: 1.36rem;
   width: 100%;
-  height: 10.5rem;
+  height: 8.4rem;
   font-size: 1.8rem; }
   .at-button a.book, .at-button a.lottery {
     margin: 0 auto;
-    text-align: center;
-    -moz-border-radius: 2.1rem;
-    -webkit-border-radius: 2.1rem;
-    border-radius: 2.1rem; }
+    text-align: center; }
   .at-button a.book {
     display: block;
-    width: 78.125%;
-    height: 42px;
-    line-height: 42px;
+    width: 20rem;
+    height: 3.36rem;
+    -moz-border-radius: 1.68rem;
+    -webkit-border-radius: 1.68rem;
+    border-radius: 1.68rem;
+    line-height: 3.36rem;
     background-color: #FFDE47;
     color: #3D4231; }
   .at-button a.lottery {
     display: block;
-    width: 78.125%;
-    height: 40px;
-    border: .1rem solid #E5E5E5;
+    width: 20rem;
+    height: 3.2rem;
+    -moz-border-radius: 1.6rem;
+    -webkit-border-radius: 1.6rem;
+    border-radius: 1.6rem;
     background-color: transparent;
+    position: relative;
+    border: .1rem solid white;
     color: #FFFFFF;
-    margin-top: 2.1rem;
-    line-height: 42px; }
+    margin-top: 1.68rem;
+    line-height: 3.2rem; }
 
 /*!======活动说明模块=========*/
 .at-detail {
@@ -269,7 +270,7 @@ input, textarea {
     margin-left: 1.5rem; }
   .at-detail li {
     padding-left: 1.5rem;
-    padding-right: 3rem;
+    padding-right: 2.4rem;
     line-height: 1.8rem;
     text-indent: -.7rem; }
   .at-detail li:nth-of-type(1) {
