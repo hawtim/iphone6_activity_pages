@@ -26,7 +26,7 @@ input,select,textarea{outline:none;}
 table{border-collapse:collapse;border-spacing:0;}
 a,button,input{-webkit-tap-highlight-color:rgba(0,0,0,0);}
 @media all and (-webkit-transform-3d){a,button,input{-webkit-tap-highlight-color:rgba(130,130,130,.52);}} 
-html,body{height:100%;}
+html,body{width: 100%;height:100%;}
 a{text-decoration:none;}
 a:hover{text-decoration:none;}
 /*！====以上是reset样式======*/
@@ -34,17 +34,17 @@ $yellow: #FFDE47;$green:#06BA04;$white:#FFFFFF;
 @import "compass/css3";
 @import "compass/utilities";
 // 雪碧图
-@mixin share{background:url(../images/share.png) no-repeat;background-size:26.3*0.8rem auto }
-@mixin ico-arrow{height:1.2*0.8rem;width:.8*0.8rem;background-position: -14.3*0.8rem 0;}
-@mixin flexble-arrow{height:1.3*0.8rem;width:.95*0.8rem;background-position: -12.9*0.8rem 0;}
-@mixin hook{height:1.6*0.8rem;width:2.1*0.8rem;background-position: -15.5*0.8rem 0;}
-@mixin dotbgsmall{height:4.7*0.8rem;width:4.7*0.8rem;background-position: -12.9*0.8rem -2.0*0.8rem;}
-@mixin telecom{height:1.5*0.8rem;width:5.4*0.8rem;background-position: -7.3*0.8rem 0;}
-@mixin wepay{height:1.5*0.8rem;width:7.0*0.8rem;background-position: 0 0;}
-@mixin big6{height:15.5*0.8rem;width:10.4*0.8rem;background-position: 0 -1.7*0.8rem;}
-@mixin iPhonesl{height:15.8*0.8rem;width:23.8*0.8rem;background-position: 0 -19.7*0.8rem;}
-@mixin tips{height:1.5*0.8rem;width:25.2*0.8rem;background-position: 0 -17.5*0.8rem;}
-@mixin triangles{height:29.9*0.8rem;width:26.3*0.8rem;background-position: 0 -44.2*0.8rem;}
+@mixin share{background:url(../images/share.png) no-repeat;background-size:26.3*0.834rem auto }
+@mixin ico-arrow{height:1.2*0.834rem;width:.8*0.834rem;background-position: -14.3*0.834rem 0;}
+@mixin flexble-arrow{height:1.3*0.834rem;width:.95*0.834rem;background-position: -12.9*0.834rem 0;}
+@mixin hook{height:1.6*0.834rem;width:2.1*0.834rem;background-position: -15.5*0.834rem 0;}
+@mixin dotbgsmall{height:4.7*0.834rem;width:4.7*0.834rem;background-position: -12.9*0.834rem -2.0*0.834rem;}
+@mixin telecom{height:1.5*0.834rem;width:5.4*0.834rem;background-position: -7.3*0.834rem 0;}
+@mixin wepay{height:1.5*0.834rem;width:7.0*0.834rem;background-position: 0 0;}
+@mixin big6{height:15.5*0.834rem;width:10.4*0.834rem;background-position: 0 -1.7*0.834rem;}
+@mixin iPhonesl{height:15.8*0.834rem;width:23.8*0.834rem;background-position: 0 -19.7*0.834rem;}
+@mixin tips{height:1.5*0.834rem;width:25.2*0.834rem;background-position: 0 -17.5*0.834rem;}
+@mixin triangles{height:29.9*0.834rem;width:26.3*0.834rem;background-position: 0 -44.2*0.834rem;}
 // sass混合
 @mixin wrapper{
 	position:relative;
@@ -85,6 +85,16 @@ input,textarea{outline:none;}
 .img-class{
 
 }
+.ellipsis {
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    width: 100%;
+    overflow: hidden;
+    -webkit-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+//该片段来自于http://outofmemory.cn
 /*! ====index.html===*/
 .wrapper-1{
 	@include wrapper;
@@ -97,11 +107,11 @@ input,textarea{outline:none;}
 }
 .logo{
 	// @include position(relative, 16px, 15px, 300px, 15px);
-	padding-top: 1.6*0.8rem;
-	padding-left: 1.5*0.8rem;
+	padding-top: 1.6*0.834rem;
+	padding-left: 1.5*0.834rem;
 	margin: 0 auto;
 	width: 100%;
-	height: 1.5*0.8rem;
+	height: 1.5*0.834rem;
 	// .telecom-img, .wepay-img{
 	// 	display: inline-block;
 	// }
@@ -126,14 +136,14 @@ input,textarea{outline:none;}
 		// background-size属性只在background属性之后定义才能生效；
 	}
 	.vertical-line{
-		@include position(relative,-.1rem,.3*0.8rem,.1rem,1.3*0.8rem);
+		@include position(relative,-1px,.3*0.834rem,1px,1.3*0.834rem);
 		display: inline-block;
 		background-color:$white;
 	}
 	.share-wepay{
 		// @include display(inline-block, 70px, 15px);
 		display: inline-block;
-		margin-left:0.6*0.8rem;
+		margin-left:0.6*0.834rem;
 		@include share;
 		@include wepay;
 		// background:transparent url(../images/share-s17a37589ee.png) 0 0  no-repeat;
@@ -146,8 +156,8 @@ input,textarea{outline:none;}
 .main-shape{
 	width:100%;
 	.share-iPhonesl {
-		@include position(absolute, 7.5*0.8rem/* 58+1+16px */, 50%, 23.8*0.8rem, 15.8*0.8rem);
-		margin-left:/* -160+40px; */-12.0*0.8rem;
+		@include position(absolute, 7.5*0.834rem/* 58+1+16px */, 50%, 23.8*0.834rem, 15.8*0.834rem);
+		margin-left:/* -160+40px; */-12.0*0.834rem;
 		@include share;
 		@include iPhonesl;
 		// background:transparent url(../images/share-s17a37589ee.png) 0 0 no-repeat;
@@ -156,8 +166,8 @@ input,textarea{outline:none;}
 		z-index: 2;
 	}
 	.share-triangles{
-		@include position(absolute,/* 44+16-2 */5.8*0.8rem, 50%,26.3*0.8rem,30.0*0.8rem);
-		margin-left: -13.6*0.8rem;
+		@include position(absolute,/* 44+16-2 */5.8*0.834rem, 50%,26.3*0.834rem,30.0*0.834rem);
+		margin-left: -13.6*0.834rem;
 		@include share;
 		@include triangles;
 		// background:transparent url(../images/share-s17a37589ee.png) 0 0 no-repeat;
@@ -167,8 +177,8 @@ input,textarea{outline:none;}
 		z-index: 3;
 	}
 	.share-big6{
-		@include position(absolute, /* 59+1+16 */7.6*0.8rem, 50%,10.4*0.8rem,15.5*0.8rem);
-		margin-left:-5.3*0.8rem;
+		@include position(absolute, /* 59+1+16 */7.6*0.834rem, 50%,10.4*0.834rem,15.5*0.834rem);
+		margin-left:-5.3*0.834rem;
 		@include share;
 		@include big6;
 		// background:transparent url(../images/share-s17a37589ee.png) 0 0  no-repeat;
@@ -182,8 +192,8 @@ input,textarea{outline:none;}
 .description{
 	// @include position(absolute,0px, 0px,auto,74px);
 	width:100%;
-	height:7.4*0.8rem;
-	margin: 21*0.8rem auto 0;
+	height:7.4*0.834rem;
+	margin: 21*0.834rem auto 0;
 	// margin-top:-35+245px;
 	// margin-left:-33+29px;
 	// margin-top:21.0rem;
@@ -214,7 +224,7 @@ input,textarea{outline:none;}
 		// }
 	}
 	p:nth-of-type(1){
-		margin-bottom:.9*0.8rem;
+		margin-bottom:.9*0.834rem;
 	}
 	p{
 		text-align: center;
@@ -222,14 +232,14 @@ input,textarea{outline:none;}
 		// height: 3.7rem;
 		margin: 0 auto;
 		font-size: 1.4rem;
-		line-height: 2.8*0.8rem;
+		line-height: 2.8*0.834rem;
 	}
 }
 // 每个微信号只能参与预订和抽奖其中一项
 .share-tips{
 	// @include position(absolute,344px, 33px,252px,14px);
 	display: block;
-	margin: /* -316+344 */2.8*0.8rem auto 0;
+	margin: /* -316+344 */2.8*0.834rem auto 0;
 	// // ((816-128)/2)
 	// margin-left: auto;
 	// margin-right: auto;
@@ -243,8 +253,8 @@ input,textarea{outline:none;}
 	// background-size: 263px auto;
 }
 .share-flexible-arrow{
-	@include position(absolute,35.5*0.8rem,50%,.9*0.8rem,1.4*0.8rem);
-	margin-left:12.9*0.8rem;
+	@include position(absolute,35.5*0.834rem,50%,.9*0.834rem,1.4*0.834rem);
+	margin-left:12.9*0.834rem;
 	// top:355px;
 	// left: 289px;
 	// // ($s-width - 22-9)
@@ -258,9 +268,9 @@ input,textarea{outline:none;}
 	// @include position(absolute,375px, 35px);
 	// top:0px;
 	// left:35px;
-	margin-top: 1.7*0.8rem;
+	margin-top: 1.7*0.834rem;
 	width:100%;
-	height:10.5*0.8rem;
+	height:10.5*0.834rem;
 	font-size: 1.8rem;
 	a.book,a.lottery{
 		margin: 0 auto;
@@ -268,22 +278,22 @@ input,textarea{outline:none;}
 		
 	}
 	a.book{
-		@include display(block, /* 250/320 */  25*0.8rem, 4.2*0.8rem);
-		@include border-radius(2.1*0.8rem);
-		line-height:4.2*0.8rem;
+		@include display(block, /* 250/320 */  25*0.834rem, 4.2*0.834rem);
+		@include border-radius(2.1*0.834rem);
+		line-height:4.2*0.834rem;
 		background-color: $yellow;
 		color: #3D4231;
 	}
 	a.lottery{
-		@include display(block, 25*0.8rem, 4.0*0.8rem);
-		// 减去边框的宽度每边.1rem
-		@include border-radius(2.0*0.8rem);
+		@include display(block, 25*0.834rem, 4.0*0.834rem);
+		// 减去边框的宽度每边1px
+		@include border-radius(2.0*0.834rem);
 		background-color: transparent;
 		position: relative;
-		border: .1rem solid white;
+		border: 1px solid white;
 		color:$white;
-		margin-top:2.1*0.8rem;
-		line-height:4.0*0.8rem;
+		margin-top:2.1*0.834rem;
+		line-height:4.0*0.834rem;
 	}
 // 	a.lottery:before {
 //     content: '';
@@ -292,9 +302,9 @@ input,textarea{outline:none;}
 //     bottom: -50%;
 //     left: -50%;
 //     right: -50%;
-//     border: .1*0.8rem solid red;
-//     -webkit-border-radius: 4.2*0.8rem;
-//     border-radius: 4.2*0.8rem;
+//     border: .1*0.834rem solid red;
+//     -webkit-border-radius: 4.2*0.834rem;
+//     border-radius: 4.2*0.834rem;
 //     -webkit-transform: scale(0.5);
 //     transform: scale(0.5);
 // }
@@ -302,36 +312,60 @@ input,textarea{outline:none;}
 /*!======活动说明模块=========*/
 .at-detail{
 	width:100%;
-	margin:5.4rem auto  0;
+	margin:5.4*0.834rem auto  0;
 	color:$white;
 	.at-detail-title{
 		display: block;
-		margin-left:1.5rem;
+		margin-left:1.5*0.834rem;
 		font-size: 1.4rem;
 	}
 	.at-detail-des{
 		font-size: 1.3rem;
-		@include display(block, 100%, 31.2rem);
+		@include display(block, 100%, 31.2*0.834rem);
 		//295px,
-		margin-left: 1.5rem;
+		margin-left: 1.5*0.834rem;
 	}
 	li{
-		padding-left:1.5rem;
-		padding-right: 2.4rem;
-		line-height:1.8rem;
-		text-indent:-.7rem;
+		padding-left:1.5*0.834rem;
+		padding-right: 2.4*0.834rem;
+		line-height:1.8*0.834rem;
+		text-indent:-.7*0.834rem;
 	}
 	li:nth-of-type(1){
-		margin-top: 1.6rem;
+		margin-top: 1.6*0.834rem;
 	}
 	li:nth-of-type(6){
-		padding-bottom: 4.1rem;
+		padding-bottom: 4.1*0.834rem;
 	}
 	li .list-style{
 		@include display(inline-block, auto, auto);
-		padding-right:.3rem;
+		padding-right:.3*0.834rem;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -342,10 +376,11 @@ input,textarea{outline:none;}
 /*!====1.身份证号和手机号要用js进行验证========2.选择城市的js代码暂时还不会使用=====*/
 .wrapper-2{
 	@include wrapper;
-	background: #fff url(../images/share/dotbgsmall.png) 0 0 repeat;
-	font-size: 13px;
-	background-size: 26px 24px;
-	// overflow:hidden;
+	background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAwCAMAAABpN6nPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkIxMzBFQ0RFOTMxODExRTU5MkY1QUY3RDgxQjBFOEQxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkIxMzBFQ0RGOTMxODExRTU5MkY1QUY3RDgxQjBFOEQxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QjEzMEVDREM5MzE4MTFFNTkyRjVBRjdEODFCMEU4RDEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QjEzMEVDREQ5MzE4MTFFNTkyRjVBRjdEODFCMEU4RDEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4N8ly7AAAAS1BMVEXy8vLo6Ojq6urp6enn5+fm5ube3t7l5eXi4uLj4+Pk5OTr6+vs7Oz5+fnw8PDt7e3x8fHz8/Pv7+/u7u709PT19fX4+Pj29vb39/dqQpG+AAACcElEQVR42pyW7Y6EIAxFcXT2S1FB2vL+T7ocGrL7G5IJjs4NZy69lVBVRayP2oYq890G37hWZU5tqMbItYVw32bXZfZ6qeZcSs6q6xrCcdT6PLXueynPI3KeIly3+3OiypIhACKSEss77n2Xom2k5OC18rT/hTlRyLnWbQPL7HmYMcIMzJzBqvU8VbcNXNWGPCcyt/Y8U3JIH6WYgea43AkB80tpf2NOpNgJGoigfH2ZYfnzmC1LCPueEr/ZNrN9516dExWQvIhYmjmlGEGipBiqbn4pFFeDnBMNG+vr5WVzXbU2hAoKH+zfd1XKinJrmz4pwkhHApBSEuF6mD2g/Q903DlRWRaRdVW9rlLeb7BSyvk8Xy+R48BuyojoUAIgljlRpTxH4B0BgzEaSGAHqAdfZFJ0g7UslJHq9zeWqmLxdY2t8Bm7vQXInKhl1+FEiII3NErGbDQxMw8KeP3JnKh4rIl3SrSp8/ToY/+yEBfagNnnJ1sjQtynRN3IGFk+BF/esQg/BcWT0QYcXOZE5bpiPA5VbAf1/fYYsOU/Px2nR4UI0ZbPM86JuqkxDjtHmxo4rWgKgWErPChtS+ZEvTT8o0rkKRciACqW+2uI78S+z3Oi+teKfYh4o/pfRkBTXo45KSpYip2ORgyIQG+/DSXGlEqhHeQcAqgNcU6kvmyMGO3tDGOJ4sDzBgAwpoM3JWrtKUZa8XFQ+m7vxwdo3vC5j93ryms2pRaZSZG/aIi0w2ArxeJIf63Ln3fIOZHSev0V4ocPb9Me9/v22HAkeJ77prW1Y8OkiJIfRxsz4u3N2IFqPwZx5PHDUC+pXwEGABM/uYpCWEhwAAAAAElFTkSuQmCC) 0 0 repeat;
+	background-size: 2.6rem 2.4rem;
+	font-size:1.3rem;
+	overflow:hidden;
+	height: 100%;
 	// background:transparent url(../images/share/dotbgsmall.png) 0 0 repeat;
 	// background-size:100%;
 }
@@ -355,71 +390,75 @@ input,textarea{outline:none;}
 }
 // 填写表格的提示文字
 .filltobook{
-	@include display(block, 320px, 44px);
+	@include display(block, 95%, 4.48*0.834rem);
 	margin: 0 auto;
-	line-height:44px;
-	padding-left:16px;
+	line-height:4.48*0.834rem;
+	padding-left:5%;
 }
 // 填写姓名，身份证，联系方式的表格1
 .form-1{
-	font-size: 16px;
-	// @include position(relative, auto, auto,320px,132px);
-	width: 320px;
-	height: 132px;
+	font-size: 1.6rem;
+	// @include position(relative, auto, auto,320px,13.2rem);
+	width: 100%;
+	// height: 13.2*0.834rem;
 	margin: 0 auto;
 	background-color: $white;
 	@include border(1px solid #CCC, 1px solid #CCC);
-	input{
-		border:0px solid #c00;
-		font-size: 16px;
+
+	.info{
+	@include display(inline-block, 70.31% 4.4*0.834rem);
+	vertical-align: middle;
+	margin-left: 1.5*0.834rem;
+	line-height:4.4*0.834rem;
+	color:#999;
 	}
+	input{
+			display: inline-block;
+			position: relative;
+			// top:-.15*0.834rem;
+			left:1.5*0.834rem;
+			border:0 solid #C00;
+			font-size: 1.6rem;
+			color:#333;
+		}
 }
 
-.info{
-	@include display(block, auto, 44px);
-	margin-left: 15px;
-	line-height:44px;
-	color:#999;
-}
-.input-info{
-	color:#333;
-	margin-left:15px;
-}
+
 .horizon-line{
-	@include display(block, 305px, 1px);
+	@include display(block, 95.31%, 1px);
 	// width:305px;
 	// height:1px;
 	background-color: #CCC;
-	margin-left:15px;
+	margin-left:4.7%;
 }
 // 选择城市和地区以及填写详细地址的表格2
 .form-2{
 	// @include position(relative, 0px, 0px, 320px, 88px);
 	// @include margin(21px,27px);
-	width: 320px;
-	height: 88px;
-	margin:21px auto 27px;
+	width: 100%;
+	height: 8.8*0.834rem;
+	margin:2.1*0.834rem auto 2.7*0.834rem;
 	@include border(1px solid #CCC, 1px solid #CCC);
 	background-color: $white;
-	font-size: 16px;
+	font-size: 1.6rem;
 }
 // ============两个下拉选择框============//
 /*选择城市*/
 .select-city {
-	@include display(inline-block, 71px, 30px);
+	@include display(inline-block, 7.1*0.834rem, 3.0*0.834rem);
 	position: relative;
 	background-color: $white;
 	color: black;
 }
 /*a链接里的span cur-select的样式设置*/
 .select-city .cur-select-city{
-	@include position(absolute, 6px, 5px, 71px, 30px);
-	line-height: 30px;
+	@include position(absolute, .6*0.834rem, .5*0.834rem, 7.1*0.834rem, 3.0*0.834rem);
+	line-height: 3.0*0.834rem;
 	/*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。*/
-	background: transparent url(../images/share/ico-arrow.png) no-repeat 59px center;
-	-webkit-background-size: 8px;
-	background-size: 8px;
-	text-indent: 10px;
+	background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAZCAYAAAA4/K6pAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjM1NjZCOTY3ODcwRTExRTU5MzAxREI0QjJDOTIxNzVBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjM1NjZCOTY4ODcwRTExRTU5MzAxREI0QjJDOTIxNzVBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzU2NkI5NjU4NzBFMTFFNTkzMDFEQjRCMkM5MjE3NUEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzU2NkI5NjY4NzBFMTFFNTkzMDFEQjRCMkM5MjE3NUEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5BJlaLAAABOUlEQVR42qRUW07DMBB06qakLYWAgE+QEHD/8wR+egLCqzxSAjPSSBhr3TjqSqMkjmd2PV7bub84A66Awo0Ir+e5yAvgAHgaI3ABXAZjc6AC2hyBCVAa4yfAdc5yWMEL0ANH0b9KS2IlP0MevAEdcBxlpchyl4gP3jfAO1BHIjT1EHi0RHz0/aFqavkTiqysSrxR1RfwLCNDkZlE/lXiE9506oU6mjOT2a2MTwowtspGY6fBeKkx/uv9wDb3mrhS9lCE1bU+o9ko8qp2D3eHVS0mGQLMfGN0Jc1eD7Uqt+8uKp/xCTQUKfYhux2HpRK5NBqt0Ta7lEA22RJIkXlG7mNyLDAXeWqQGzWWSwnw3N8a5I0yb1NOF/uQnUFywQVD8nfOldbpWjvV8WXbPuSQ41iqZf0Y0q8AAwDVuEX/WUaQrQAAAABJRU5ErkJggg==) no-repeat 5.9*0.834rem center;
+	-webkit-background-size: .8*0.834rem;
+	background-size: .8*0.834rem;
+	text-indent: 1.0*0.834rem;
 }
 /*链接被点击的时候，背景颜色变成白色*/
 .select-city:hover .cur-select-city{
@@ -428,40 +467,52 @@ input,textarea{outline:none;}
 }
 /*对select元素样式设置，主要在于隐藏select元素*/
 .select-city select{
-	@include position(absolute, 6px, 5px, 71px, 30px);
+	@include position(absolute, .6*0.834rem, .5*0.834rem, 7.1*0.834rem, 3.0*0.834rem);
 	opacity: 0;
-	font-size: 16px;
+	font-size: 1.6rem;
 	color: black;
 }
 // 竖直线
 .vertical-line{
-	@include position(relative, 6px, -3+17px, 1px, 30px);
+	@include position(relative, .6*0.834rem,/*  -3+17 */1.4*0.834rem, 1px, 3.0*0.834rem);
 	display: inline-block;
 	background-color: #CCC;
 	z-index: 3;
 }
 /*选择区域*/
-.select-distinct {
-	@include position(relative, auto, auto, 218px, 30px);
+/*a*/.select-distinct {
+	@include position(relative, 0, 0, 25*0.834rem, 3.0*0.834rem);
 	display: inline-block;
 	background-color: $white;
 	color: black;
-}
-.select-distinct .cur-select-distinct{
-	@include position(absolute, 6px, 16px, 218px, 30px);
-	line-height: 30px;
-	/*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。 */
-	background: url(../images/share/ico-arrow.png) no-repeat 206px center;
-	-webkit-background-size: 8px auto;
-	background-size: 8px auto;
-	text-indent: 10px;
-}
+	.cur-select-distinct{
+		@include position(absolute, .6*0.834rem, 1.6*0.834rem, 25*0.834rem, 3.0*0.834rem);
+		line-height: 3.0*0.834rem;
+		/*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。 */
+		background: url(../images/share/ico-arrow.png) no-repeat 100% center;
+		-webkit-background-size: .8*0.834rem auto;
+		background-size: .8*0.834rem auto;
+		text-indent: 1.0*0.834rem;
+	}
+	/* .ico-arrow{
+		position: absolute;
+		z-index: 3;
+		top:0.5rem;
+		left:22rem;
+		display: inline-block;
+		width:.8rem;
+		height: 2.5rem;
+		background: url(../images/share/ico-arrow.png) no-repeat 0 center;
+		-webkit-background-size: .8*0.834rem auto;
+		background-size: .8*0.834rem auto;
+	} */
 /*对select元素样式设置，主要在于隐藏select元素*/
-.select-distinct select{
-	@include position(absolute, 6px, 16px, 218px, 30px);
-	opacity: 0;
-	font-size: 16px;
-	color: black;
+	select{
+		@include position(absolute, .6*0.834rem, 1.6*0.834rem, 25*0.834rem, 3.0*0.834rem);
+		opacity: 0;
+		font-size: 1.6*0.834rem;
+		color: black;
+	}
 }
 .select-distinct:hover .cur-select-distinct{
 	background-color: $white;
@@ -470,28 +521,33 @@ input,textarea{outline:none;}
 
 // 水平分割线
 .form-2-horizon-line{
-	@include position(relative, -35+44px, 15px, 305px, 1px);
+	// @include position(relative, /* -35+44 */.9*0.834rem, 1.5*0.834rem, 30.5*0.834rem, 1px);
+	display: block;
+	width: 95.31%;
+	height: 1px;
+	margin-left: 4.7%;
+	margin-top:.9*0.834rem ;
 	background-color: #CCC;
 }
 .particular-address{
-	@include position(relative, 22px, 14px, 286px, 31px);
+	@include position(relative, (2.2-0.9)*0.834rem, 1.4*0.834rem, 28.6*0.834rem, 3.1*0.834rem);
 }
 .particular-address input{
-	@include display(block, 286px, 16px);
-	line-height: 18px;
-	border:0px solid #c00;
-	font-size: 16px;
+	@include display(block, 28.6*0.834rem, 1.8*0.834rem);
+	line-height: 1.8*0.834rem;
+	border:0 solid #c00;
+	font-size: 1.6rem;
 	//此处为要用@media screen为不同屏幕指定line-height，
 	//在苹果上正常但在安卓上并不正确
 }
 // 确认按钮
 .confirm-btn{
-	@include display(block, 293px, 40px);
-	@include border-radius(5px);
+	@include display(block, 29.3*0.834rem, 4.0*0.834rem);
+	@include border-radius(.5*0.834rem);
 	border:1px solid #1A9D18;
 	margin: 0 auto;
 	text-align: center;
-	line-height: 40px;
+	line-height: 4.0*0.834rem;
 	background-image: -webkit-gradient(linear, left top, left bottom,
 		color-stop(0, #06BA04), color-stop(1,#06BF04));
 	// background-color: #06BF04;
@@ -499,20 +555,20 @@ input,textarea{outline:none;}
 	//在苹果上正常但在安卓上并不正确
 	input{
 		color:$white;
-		border:0px solid #c00;
-		font-size: 18px;
+		border:0 solid #c00;
+		font-size: 1.8rem;
 		background-color: transparent;
 	}
 }
 .tips{
 	display: block;
-	width: 143px;
-	height: 12px;
-	line-height: 12px;
-	margin: 14px auto 0;
-	padding-bottom: 125-16px;
+	width: 14.3*0.834rem;
+	height: 1.2*0.834rem;
+	line-height: 1.2*0.834rem;
+	margin: 1.4*0.834rem auto 0;
+	// padding-bottom: /* 125-16 */10.9*0.834rem;
 	text-align: center;
-	font-size: 12px;
+	font-size: 1.2rem;
 }
 
 
