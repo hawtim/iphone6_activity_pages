@@ -36,10 +36,10 @@ github项目主页:
 
 <a name="其他"></a>
 ##其他
-该页面为学习所做，多方面还不够完善。
-项目过程中根据相关资料写了一篇博文，针对css3REM单位的bug。
-针对结构进行语意化提升，将class="bold" class="white"等改成使用em标签或更加语意化的方式，第二个页面三个input的字体改成font-weight:bold;
-响应式图片是否需要变大？@2X——看项目实际需求或者准备几种图片用js或者媒介查询解决
+###该页面为学习所做，多方面还不够完善。
+###项目过程中根据相关资料写了一篇博文，针对css3REM单位的bug。
+###针对结构进行语意化提升，将class="bold" class="white"等改成使用em标签或更加语意化的方式，第二个页面三个input的字体改成font-weight:bold;
+###响应式图片是否需要变大？@2X——看项目实际需求或者准备几种图片用js或者媒介查询解决
 ****
 欢迎指出该项目的各种问题，也希望能对初学者有一点点的帮助。Any question and suggestion would be better.THANKS A LOT!
 ****
