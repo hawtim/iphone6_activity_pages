@@ -20,9 +20,9 @@
 <a name="获取代码"></a>
 ##获取代码
 coding.net项目主页:
-<https://coding.net/u/hawtim/p/H5_iPhone6><br>
-github项目主页:
-<https://github.com/hawtim/iPhone6>
+<https://coding.net/u/hawtim/p/H5_iP6><br>
+github项目主页:(无上传)
+<dd><https://github.com/hawtim/iPhone6></dd>
 <br>根据作者水平会做持续修改以完善代码各方面符合标准和维护规范
 <a name="问题分析"></a>
 
