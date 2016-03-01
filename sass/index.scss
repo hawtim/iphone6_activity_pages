@@ -1,18 +1,4 @@
 @charset "UTF-8";
-// 设置根元素的大小
-html {
-	display: block;
-    -ms-touch-action: none;
-    font-size: 10px;
-    // font-size: 62.5%;
-    -webkit-text-size-adjust: 100%;
-}
-body{
-	font-size: 1.6rem;
-	// 使用em可以避免安卓的Chrome不支持1.2rem，让body继承html标签的字号，间接实现rem的功能。
-	// bug 2：因为Chrome设置了最小字号为12px，导致如果在宽高、行高、边距等地方用rem，虽然在html那设置了10px，
-	// 但默认还是会按照12px来计算，所以实际会偏大。建议rem只是在字号上用比较好。
-}
  /*================== 样式重置 ======================== */
 body,p,ul,ol,li,h1,h2,h3,dl,dt,dd{margin:0;padding:0;}
 h2{font-size:100%;}
@@ -34,26 +20,18 @@ $yellow: #FFDE47;$green:#06BA04;$white:#FFFFFF;
 @import "compass/css3";
 @import "compass/utilities";
 // 雪碧图
-@mixin share{background:url(../images/share.png) no-repeat;background-size:26.3rem auto }
-@mixin ico-arrow{height:1.2rem;width:.8rem;background-position: -14.3rem 0;}
-@mixin flexble-arrow{height:1.3rem;width:.95rem;background-position: -12.9rem 0;}
-@mixin hook{height:1.6rem;width:2.1rem;background-position: -15.5rem 0;}
-@mixin dotbgsmall{height:4.7rem;width:4.7rem;background-position: -12.9rem -2.0rem;}
-@mixin telecom{height:1.5rem;width:5.4rem;background-position: -7.3rem 0;}
-@mixin wepay{height:1.5rem;width:7.0rem;background-position: 0 0;}
-@mixin big6{height:15.5rem;width:10.4rem;background-position: 0 -1.7rem;}
-@mixin iPhonesl{height:15.8rem;width:23.8rem;background-position: 0 -19.7rem;}
-@mixin tips{height:1.5rem;width:25.2rem;background-position: 0 -17.5rem;}
-@mixin triangles{height:29.9rem;width:26.3rem;background-position: 0 -44.2rem;}
+@mixin img-shapes{background:url(../images/share/img-shapes.png) no-repeat;background-size:26.3rem 34.9rem }
+@mixin ico-arrow{height:1.2rem;width:.8rem;background-position: 0 0;}
+@mixin flexble-arrow{height:1.3rem;width:.9rem;background-position: -1.7rem 0;}
+@mixin hook{height:1.6rem;width:2.1rem;background-position: -3.4rem 0;}
+@mixin dotbgsmall{height:2.4rem;width:2.6rem;background-position: -19.6rem 0;}
+@mixin telecom{height:1.5rem;width:5.2rem;background-position: -6.5rem 0;}
+@mixin wepay{height:1.4rem;width:7.0rem;background-position: -11.8rem 0;}
+@mixin tips{height:1.4rem;width:25.1rem;background-position: 0 -2.6rem;}
+@mixin bg-shape{height:29.9rem;width:26.3rem;background-position: 0 -4.9rem;}
+
 // sass混合
-@mixin wrapper{
-	position:relative;
-	width:100%;
-	margin:0 auto;
-	-webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    background-color: #FFF;
-}
+@mixin wrapper{position:relative;width:100%;margin:0 auto;-webkit-box-sizing: border-box;box-sizing: border-box;background-color: #FFF;}
 @mixin position($position:relative, $top:auto, $left:auto, $width:auto, $height:auto){
 	position: $position;top:$top;left:$left;height:$height;width:$width;
 }
@@ -79,12 +57,12 @@ input,textarea{outline:none;}
 .clearfix {zoom:1}
 .clearfix:after {content:' '; display: block; clear: both;visibility: hidden;}
 /*!=====公用样式======*/
-.focus-yellow{
-	color: #FFFF66;
-}
-.img-class{
 
-}
+// 设置根元素的大小
+html {display: block;font-size: 10px;font-size: 62.5%; -webkit-text-size-adjust: 100%;}
+body{font-size: 1.6rem;}
+.focus-yellow{color: #FFFF66;}
+// 超过长度省略css
 .ellipsis {
     display: inline-block;
     white-space: nowrap;
@@ -94,7 +72,6 @@ input,textarea{outline:none;}
     -webkit-text-overflow: ellipsis;
     text-overflow: ellipsis;
 }
-//该片段来自于http://outofmemory.cn
 /*! ====index.html===*/
 .wrapper-1{
 	@include wrapper;
@@ -103,36 +80,17 @@ input,textarea{outline:none;}
 	background:transparent url(../images/bg.jpg) 0 0 no-repeat;
 	background-size:cover;
 	overflow:hidden;
-
 }
 .logo{
-	// @include position(relative, 16px, 15px, 300px, 15px);
 	padding-top: 1.6rem;
 	padding-left: 1.5rem;
 	margin: 0 auto;
 	width: 100%;
 	height: 1.5rem;
-	// .telecom-img, .wepay-img{
-	// 	display: inline-block;
-	// }
-	// .telecom-img{
-	// 	width: 53px;
-	// 	height: 15px;
-	// 	padding:0;
-	// }
-	// .wepay-img{
-	// 	width: 70px;
-	// 	height: 15px;
-	// 	padding: 0;
-	// }
 	.share-telecom{
-		// @include display(inline-block, 52px, 15px);
 		display: inline-block;
-		@include share;
+		@include img-shapes;
 		@include telecom;
-		// background:transparent url(../images/share-s17a37589ee.png) 0 0 no-repeat;
-		// background-size: 263px auto;
-		// background-position: -70px 0;
 		// background-size属性只在background属性之后定义才能生效；
 	}
 	.vertical-line{
@@ -141,141 +99,76 @@ input,textarea{outline:none;}
 		background-color:$white;
 	}
 	.share-wepay{
-		// @include display(inline-block, 70px, 15px);
 		display: inline-block;
 		margin-left:0.6rem;
-		@include share;
+		@include img-shapes;
 		@include wepay;
-		// background:transparent url(../images/share-s17a37589ee.png) 0 0  no-repeat;
-		// background-size: 263px auto;
-		// background-position: 0 0;
-		// border:1px solid green;
 	}
 }
 // 背景的主体形状
 .main-shape{
 	width:100%;
-	.share-iPhonesl {
-		@include position(absolute, 7.5rem/* 58+1+16px */, 50%, 23.8rem, 15.8rem);
-		margin-left:/* -160+40px; */-12.0rem;
-		@include share;
-		@include iPhonesl;
-		// background:transparent url(../images/share-s17a37589ee.png) 0 0 no-repeat;
-		// background-size: 263px auto;
-		// background-position: 0 -216px;
-		z-index: 2;
-	}
-	.share-triangles{
-		@include position(absolute,/* 44+16-2 */5.8rem, 50%,26.3rem,30.0rem);
-		margin-left: -13.6rem;
-		@include share;
-		@include triangles;
-		// background:transparent url(../images/share-s17a37589ee.png) 0 0 no-repeat;
-		// background-size: 263px auto;
-		// background-position: 0 -748px;
-		// border:1px solid red;
-		z-index: 3;
-	}
-	.share-big6{
-		@include position(absolute, /* 59+1+16 */7.6rem, 50%,10.4rem,15.5rem);
-		margin-left:-5.3rem;
-		@include share;
-		@include big6;
-		// background:transparent url(../images/share-s17a37589ee.png) 0 0  no-repeat;
-		// background-size: 263px auto;
-		// background-position: 0 -60px;
-		// border:1px solid red;
-		z-index: 4;
+	.bg-shape{
+		background:transparent url(../images/share/bg-shape.png) left top no-repeat;
+		background-size: 100%;
+		// @include position(absolute,/* 44+16-2 */5.8rem, 50%,26.3rem,30.0rem);
+		// margin-left: -13.6rem;
+		display: block;
+		width: 26.3rem;
+		height: 30rem;
+		margin: 0 auto;
+		margin-top: -3.1+5.8rem;
 	}
 }
 // iphone6马上到手
 .description{
-	// @include position(absolute,0px, 0px,auto,74px);
+	position: relative;
 	width:100%;
 	height:7.4rem;
-	margin: 21rem auto 0;
-	// margin-top:-35+245px;
-	// margin-left:-33+29px;
-	// margin-top:21.0rem;
+	margin: -12rem auto 0;
 	h2{
+		margin:0 auto;
 		font-size:3.2rem;
 		height: 3.2rem;
 		line-height: 3.2rem;
 		width:26.6rem;
 		text-align: center;
+		letter-spacing: -32/10000*25rem;
 		//<!--此处具体的数字待移动端测试后再做修改，现在26.6rem再小就会导致换行-->
-		margin:0 auto;
-		// span:nth-of-type(1){
-		// 	width: 24.7rem;
-		// 	height: 3.7rem;
-		// 	display: inline-block;
-		// 	margin: 0 auto;
-		// 	text-align: center;
-		// 	font-size: 1.4rem;
-		// 	line-height: 14px!important;
-		// 	font-weight: normal;
-		// }
-		// span:nth-of-type(2){
-		// 	display:inline-block;
-		// 	margin: 0 auto;
-		// 	font-size: 1.4rem;
-		// 	line-height: 14px!important;
-		// 	font-weight: normal;
-		// }
-	}
-	p:nth-of-type(1){
-		margin-bottom:.9rem;
 	}
 	p{
 		text-align: center;
 		width: 25.2rem;
-		// height: 3.7rem;
+		// height:5.4rem;
 		margin: 0 auto;
 		font-size: 1.4rem;
 		line-height: 2.8rem;
 	}
-}
-// 每个微信号只能参与预订和抽奖其中一项
-.share-tips{
-	// @include position(absolute,344px, 33px,252px,14px);
-	display: block;
-	margin: /* -316+344 */2.8rem auto 0;
-	// // ((816-128)/2)
-	// margin-left: auto;
-	// margin-right: auto;
-	// // (320-252-35)
-	// width: 25.2rem;
-	// height: 1.4rem;
-	// border: 1px solid red;
-	@include share;
-	@include tips;
-	// background:transparent url(../images/share/tips.png) 0 0 no-repeat;
-	// background-size: 263px auto;
-}
-.share-flexible-arrow{
-	@include position(absolute,35.5rem,50%,.9rem,1.4rem);
-	margin-left:12.9rem;
-	// top:355px;
-	// left: 289px;
-	// // ($s-width - 22-9)
-	@include share;
+	// 每个微信号只能参与预订和抽奖其中一项
+	.share-tips{
+		display: block;
+		margin: /* -316+344 */1.8rem auto 0;
+		@include img-shapes;
+		@include tips;
+	}
+	.share-flexible-arrow{
+		display: block;
+		@include position(relative,-0.5rem,50%,.9rem,1.4rem);
+		margin-left:12.9rem;
+		@include img-shapes;
 		@include flexble-arrow;
-	// background:transparent url(../images/share/flexble-arrow.png) 0 0 no-repeat;
-	// background-size: 263px auto;
+	}
 }
 /*!=====按钮模块======*/
 .at-button{
-	// @include position(absolute,375px, 35px);
-	// top:0px;
-	// left:35px;
-	margin-top: 1.7rem;
+	position: relative;
+	margin-top: 6rem;
 	width:100%;
 	height:10.5rem;
 	font-size: 1.8rem;
 	a.book,a.lottery{
 		margin: 0 auto;
 		text-align: center;
-		
 	}
 	a.book{
 		@include display(block, /* 250/320 */  25rem, 4.2rem);
@@ -295,6 +188,7 @@ input,textarea{outline:none;}
 		margin-top:2.1rem;
 		line-height:4.0rem;
 	}
+// 实现0.5px边框
 // 	a.lottery:before {
 //     content: '';
 //     position: absolute;
@@ -353,35 +247,14 @@ input,textarea{outline:none;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*! =================页面2 prebook.html CSS样式==========================*/
 /*!====1.身份证号和手机号要用js进行验证========2.选择城市的js代码暂时还不会使用=====*/
 .wrapper-2{
 	@include wrapper;
-	background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAwCAMAAABpN6nPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkIxMzBFQ0RFOTMxODExRTU5MkY1QUY3RDgxQjBFOEQxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkIxMzBFQ0RGOTMxODExRTU5MkY1QUY3RDgxQjBFOEQxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QjEzMEVDREM5MzE4MTFFNTkyRjVBRjdEODFCMEU4RDEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QjEzMEVDREQ5MzE4MTFFNTkyRjVBRjdEODFCMEU4RDEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4N8ly7AAAAS1BMVEXy8vLo6Ojq6urp6enn5+fm5ube3t7l5eXi4uLj4+Pk5OTr6+vs7Oz5+fnw8PDt7e3x8fHz8/Pv7+/u7u709PT19fX4+Pj29vb39/dqQpG+AAACcElEQVR42pyW7Y6EIAxFcXT2S1FB2vL+T7ocGrL7G5IJjs4NZy69lVBVRayP2oYq890G37hWZU5tqMbItYVw32bXZfZ6qeZcSs6q6xrCcdT6PLXueynPI3KeIly3+3OiypIhACKSEss77n2Xom2k5OC18rT/hTlRyLnWbQPL7HmYMcIMzJzBqvU8VbcNXNWGPCcyt/Y8U3JIH6WYgea43AkB80tpf2NOpNgJGoigfH2ZYfnzmC1LCPueEr/ZNrN9516dExWQvIhYmjmlGEGipBiqbn4pFFeDnBMNG+vr5WVzXbU2hAoKH+zfd1XKinJrmz4pwkhHApBSEuF6mD2g/Q903DlRWRaRdVW9rlLeb7BSyvk8Xy+R48BuyojoUAIgljlRpTxH4B0BgzEaSGAHqAdfZFJ0g7UslJHq9zeWqmLxdY2t8Bm7vQXInKhl1+FEiII3NErGbDQxMw8KeP3JnKh4rIl3SrSp8/ToY/+yEBfagNnnJ1sjQtynRN3IGFk+BF/esQg/BcWT0QYcXOZE5bpiPA5VbAf1/fYYsOU/Px2nR4UI0ZbPM86JuqkxDjtHmxo4rWgKgWErPChtS+ZEvTT8o0rkKRciACqW+2uI78S+z3Oi+teKfYh4o/pfRkBTXo45KSpYip2ORgyIQG+/DSXGlEqhHeQcAqgNcU6kvmyMGO3tDGOJ4sDzBgAwpoM3JWrtKUZa8XFQ+m7vxwdo3vC5j93ryms2pRaZSZG/aIi0w2ArxeJIf63Ln3fIOZHSev0V4ocPb9Me9/v22HAkeJ77prW1Y8OkiJIfRxsz4u3N2IFqPwZx5PHDUC+pXwEGABM/uYpCWEhwAAAAAElFTkSuQmCC) 0 0 repeat;
+	background:transparent url(../images/share/dotbgsmall.png) 0 0  repeat;
 	background-size: 2.6rem 2.4rem;
 	font-size:1.3rem;
 	overflow:hidden;
-	// background:transparent url(../images/share/dotbgsmall.png) 0 0 repeat;
-	// background-size:100%;
 }
 // 填写信息进行预订和支持随时退款的颜色设置
 .filltobook, .tips{
@@ -403,7 +276,6 @@ input,textarea{outline:none;}
 	margin: 0 auto;
 	background-color: $white;
 	@include border(1px solid #CCC, 1px solid #CCC);
-
 	.info{
 	@include display(inline-block, 70.31% 4.4rem);
 	vertical-align: middle;
@@ -411,6 +283,7 @@ input,textarea{outline:none;}
 	line-height:4.4rem;
 	color:#999;
 	}
+	// span.info:nth-of-type(1){letter-spacing: 2px;}
 	input{
 			display: inline-block;
 			position: relative;
@@ -430,8 +303,6 @@ input,textarea{outline:none;}
 }
 // 选择城市和地区以及填写详细地址的表格2
 .form-2{
-	// @include position(relative, 0px, 0px, 320px, 88px);
-	// @include margin(21px,27px);
 	width: 100%;
 	height: 8.8rem;
 	margin:2.1rem auto 2.7rem;
@@ -449,10 +320,16 @@ input,textarea{outline:none;}
 }
 /*a链接里的span cur-select的样式设置*/
 .select-city .cur-select-city{
-	@include position(absolute, 0rem, .5rem, 7.1rem, 1.6rem);
+	// @include position(absolute, 0rem, .5rem, 7.1rem, 1.6rem);
+	position: absolute;
+	top:0;
+	right:-.5rem;
+	width: 7.1rem;
+	height: 1.6rem;
 	line-height: 1.6rem;
 	/*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。*/
-	background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAZCAYAAAA4/K6pAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjM1NjZCOTY3ODcwRTExRTU5MzAxREI0QjJDOTIxNzVBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjM1NjZCOTY4ODcwRTExRTU5MzAxREI0QjJDOTIxNzVBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzU2NkI5NjU4NzBFMTFFNTkzMDFEQjRCMkM5MjE3NUEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzU2NkI5NjY4NzBFMTFFNTkzMDFEQjRCMkM5MjE3NUEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5BJlaLAAABOUlEQVR42qRUW07DMBB06qakLYWAgE+QEHD/8wR+egLCqzxSAjPSSBhr3TjqSqMkjmd2PV7bub84A66Awo0Ir+e5yAvgAHgaI3ABXAZjc6AC2hyBCVAa4yfAdc5yWMEL0ANH0b9KS2IlP0MevAEdcBxlpchyl4gP3jfAO1BHIjT1EHi0RHz0/aFqavkTiqysSrxR1RfwLCNDkZlE/lXiE9506oU6mjOT2a2MTwowtspGY6fBeKkx/uv9wDb3mrhS9lCE1bU+o9ko8qp2D3eHVS0mGQLMfGN0Jc1eD7Uqt+8uKp/xCTQUKfYhux2HpRK5NBqt0Ta7lEA22RJIkXlG7mNyLDAXeWqQGzWWSwnw3N8a5I0yb1NOF/uQnUFywQVD8nfOldbpWjvV8WXbPuSQ41iqZf0Y0q8AAwDVuEX/WUaQrQAAAABJRU5ErkJggg==) no-repeat 5.9rem center;
+	background: transparent url(../images/share/ico-arrow.png) no-repeat 5.9rem center;
+
 	-webkit-background-size: .8rem;
 	background-size: .8rem;
 	text-indent: 1rem;
@@ -483,13 +360,22 @@ input,textarea{outline:none;}
 	background-color: $white;
 	color: black;
 	.cur-select-distinct{
-		@include position(absolute, 0rem, 1.6rem, 18rem, 1.6rem);
+		// @include position(absolute, 0rem, 1.6rem, 16rem, 1.6rem);
+		position: absolute;top:0;right:-1rem;width: 16rem;height: 1.6rem;
 		line-height: 1.6rem;
-		/*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。 */
 		background: url(../images/share/ico-arrow.png) no-repeat 100% center;
-		-webkit-background-size: .8rem auto;
 		background-size: .8rem auto;
-		text-indent: 1rem;
+		/*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。 */
+		
+		// text-indent: 1rem;
+		// .ico-arrow{
+		// 	display: block;width: 0.8rem;height: 1.25rem;
+		// 	background: url(../images/share/ico-arrow.png) no-repeat 100% center;
+		// 	background-size: .8rem auto;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left:0;
+		// }
 	}
 /*对select元素样式设置，主要在于隐藏select元素*/
 	select{
@@ -503,8 +389,6 @@ input,textarea{outline:none;}
 	background-color: $white;
 	/*默认为白色背景*/
 }
-
-
 
 
 // 水平分割线
@@ -560,18 +444,11 @@ input,textarea{outline:none;}
 }
 
 
-
-
 /*!=====页面3 prebook-detail.html  CSS=============*/
-
-
-
 
 .wrapper-3{
 	@include wrapper;
-	// background: transparent url(../images/share/dotbgsmall.png) 0 0 repeat;
-	background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAwCAMAAABpN6nPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkIxMzBFQ0RFOTMxODExRTU5MkY1QUY3RDgxQjBFOEQxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkIxMzBFQ0RGOTMxODExRTU5MkY1QUY3RDgxQjBFOEQxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QjEzMEVDREM5MzE4MTFFNTkyRjVBRjdEODFCMEU4RDEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QjEzMEVDREQ5MzE4MTFFNTkyRjVBRjdEODFCMEU4RDEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4N8ly7AAAAS1BMVEXy8vLo6Ojq6urp6enn5+fm5ube3t7l5eXi4uLj4+Pk5OTr6+vs7Oz5+fnw8PDt7e3x8fHz8/Pv7+/u7u709PT19fX4+Pj29vb39/dqQpG+AAACcElEQVR42pyW7Y6EIAxFcXT2S1FB2vL+T7ocGrL7G5IJjs4NZy69lVBVRayP2oYq890G37hWZU5tqMbItYVw32bXZfZ6qeZcSs6q6xrCcdT6PLXueynPI3KeIly3+3OiypIhACKSEss77n2Xom2k5OC18rT/hTlRyLnWbQPL7HmYMcIMzJzBqvU8VbcNXNWGPCcyt/Y8U3JIH6WYgea43AkB80tpf2NOpNgJGoigfH2ZYfnzmC1LCPueEr/ZNrN9516dExWQvIhYmjmlGEGipBiqbn4pFFeDnBMNG+vr5WVzXbU2hAoKH+zfd1XKinJrmz4pwkhHApBSEuF6mD2g/Q903DlRWRaRdVW9rlLeb7BSyvk8Xy+R48BuyojoUAIgljlRpTxH4B0BgzEaSGAHqAdfZFJ0g7UslJHq9zeWqmLxdY2t8Bm7vQXInKhl1+FEiII3NErGbDQxMw8KeP3JnKh4rIl3SrSp8/ToY/+yEBfagNnnJ1sjQtynRN3IGFk+BF/esQg/BcWT0QYcXOZE5bpiPA5VbAf1/fYYsOU/Px2nR4UI0ZbPM86JuqkxDjtHmxo4rWgKgWErPChtS+ZEvTT8o0rkKRciACqW+2uI78S+z3Oi+teKfYh4o/pfRkBTXo45KSpYip2ORgyIQG+/DSXGlEqhHeQcAqgNcU6kvmyMGO3tDGOJ4sDzBgAwpoM3JWrtKUZa8XFQ+m7vxwdo3vC5j93ryms2pRaZSZG/aIi0w2ArxeJIf63Ln3fIOZHSev0V4ocPb9Me9/v22HAkeJ77prW1Y8OkiJIfRxsz4u3N2IFqPwZx5PHDUC+pXwEGABM/uYpCWEhwAAAAAElFTkSuQmCC) 0 0 repeat;
-	// background-size:100%;
+	background:transparent url(../images/share/dotbgsmall.png) 0 0  repeat;
 	padding-top:1.7rem;
 	background-size: 2.6rem 2.4rem;
 	font-size: 1.2rem;
@@ -589,7 +466,6 @@ input,textarea{outline:none;}
 	@include border(1px solid #CCC, 1px solid #CCC);
 // 绿色背景和打勾标志
 .success-sign{
-	// @include position(absolute, 10px, 7px, 35px,35px);
 	display: inline-block;
 	width: 3.5rem;
 	height: 3.5rem;
@@ -639,8 +515,6 @@ input,textarea{outline:none;}
 }
 // 基础信息模块
 .basic-info{
-	// @include position(relative, 15px, 15px, 300px,auto);
-	// width: 30.0*0.834rem;
 	height:auto;
 	margin-top: 1.8rem ;
 	margin-left:1.5rem ;
@@ -651,7 +525,6 @@ input,textarea{outline:none;}
 	}
 	ul>li:nth-of-type(1){
 		color:#AAA;
-		// letter-spacing: 0.1rem;
 	}
 	ul>li:nth-of-type(2){
 		margin-left: .7rem;
@@ -672,9 +545,6 @@ input,textarea{outline:none;}
 		letter-spacing:.18rem;
 	}
 	.hl-2{
-	// position: absolute;
-	// top: 18.8rem;
-	// left: 4.7%;
 	margin-top:/* 20-5 */1.5rem;
 	margin-bottom: /* 19-5 */1.4rem;
 	margin-left:0;
@@ -791,20 +661,8 @@ input,textarea{outline:none;}
     }
 }
 
-@media screen and (min-width: 800px) and (max-width: 959px ) {
+@media screen and (min-width: 800px) {
     html {
         font-size: 25px;
-    }
-}
-
-@media screen and (min-width: 960px) and (max-width: 1079px ) {
-    html {
-        font-size: 30px;
-    }
-}
-
-@media screen and (min-width: 1080px) {
-    html {
-        font-size: 32px;
     }
 }

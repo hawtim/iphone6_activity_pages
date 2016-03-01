@@ -26,51 +26,60 @@
 		<!-- 基本信息表格 -->
 		<form class="form-1" id="form1" action="#" onsubmit="return validate_form(this)" method="post">
 			<!-- 输入姓名 -->
-			<span class="info" id="username">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+			<span class="info" >姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
 			<!-- <span class="input-info"><em></em></span> -->
-			<input id="userText" type="text" name="usertext" placeholder="请输入你的姓名">
+			<input id="username" type="text" name="usertext" onchange="return p_name()" placeholder="请输入你的姓名">
 			<span class="horizon-line"></span>
 			<!-- 输入身份证号 -->
-			<span class="info" id="idcode" >身份证号</span>
+			<span class="info"  >身份证号</span>
 			<!-- <span class="input-info"><em></em></span> -->
-			<input id="userId" type="text" placeholder="请输入你的身份证号">
+			<input id="idcode" type="text" onchange="return IdentityCodeValid(code) " placeholder="请输入你的身份证号" value="">
 			<span class="horizon-line"></span>
 			<!-- 输入联系电话 -->
-			<span class="info" id="phone">联系电话</span>
+			<span class="info" >联系电话</span>
 			<!-- <span class="input-info"><em></em></span> -->
-			<input id="userPhone" type="text"  onKeyUp="value=value.replace(/\D/g,'')" onafterpaste="value=value.replace(/\D/g,'')" placeholder="请输入你的联系方式">
+			<input id="phone" type="text" onchange="return validatemobile(mobile)" onKeyUp="value=value.replace(/\D/g,'')" onafterpaste="value=value.replace(/\D/g,'')" placeholder="请输入你的联系方式">
 		</form>
 		<!-- 送货地址表格 -->
 		<form class="form-2" id="form2" action="#" onsubmit="return validate_form(this)" method="post">
 			<a class="select-city" id="select-city">
-			<span class="cur-select-city">上海</span>
-			<select>
-			<option>上海</option>
-			<option>北京</option>
-			<option>深圳</option>
-			<option>广州</option>
-			<option>珠海</option>
-			</select>
+				<span class="cur-select-city">上海</span>
+				<select onmouseup="return changeDistinct()">
+					<!-- option 本身没有触发事件 -->
+					<option value="sh" selected="selected" >上海</option>
+					<option value="bj">北京</option>
+					<option value="sz" >深圳</option>
+					<option value="gz">广州</option>
+					<option value="zh">珠海</option>
+				</select>
 			</a>
 			<span class="vertical-line"></span>
 			<a class="select-distinct" id="select-distinct">
-				<span class="cur-select-distinct">崇明区</span>
-				<select>
-				<option>崇明区</option>
-				<option>黄浦区</option>
-				<option>卢湾区</option>
-				<option>徐汇区</option>
-				<option>长宁区</option>
+				<span class="cur-select-distinct" style="display:block">崇明区</span><!-- <span class="ico-arrow"></span> -->
+				<select name="shanghai" id="sh" style="display:block">
+					<option value="cm">崇明区</option>
+					<option value="hp">黄浦区</option>
+					<option value="lw">卢湾区</option>
+					<option value="xh">徐汇区</option>
+					<option value="cn">长宁区</option>
+				</select>
+				<select name="shenzhen" id="sz" style="display: none">
+					<option value="ft" selected="selected">福田区</option>
+					<option value="ns">南山区</option>
+					<option value="ba">宝安区</option>
+					<option value="xh">罗湖区</option>
+					<option value="cn">盐田区</option>
+					<option value="cn">龙岗区</option>
 				</select>
 			</a>
 			<span class="form-2-horizon-line"></span>
-			<div class="particular-address" id="address">
-				<input type="text"  id="userAddress" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]/g,'')" placeholder="请输入详细的送货地址">
+			<div class="particular-address" >
+				<input type="text"  id="address" onchange="return p_address()" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]/g,'')" placeholder="请输入详细的送货地址">
 			</div>
 		</form>
 		<!-- 确认支付 -->
 		<div class="confirm-btn">
-			<a href="prebook-detail.html">
+			<a href="./prebook-detail.html">
 				<input type="submit" value="确定并支付888元">
 			</a>
 		</div>
@@ -78,6 +87,7 @@
 		<span class="tips">支持随时退款</span>
 		<span class="fix">&nbsp;</span>
 	</div>
-<script src="../javascript/page2certificate.js"></script>
+<script src="../javascripts/page2certificate.js"></script>
+<script src="../javascripts//select.js"></script>
 </body>
 </html>

@@ -1,6 +1,0 @@
-@import "compass/utilities/sprites";    // 加载compass sprites模块
-@import "../images/*.png";                    // 导入share目录下所有png图片
-.test {
-    @include images-sprites(big6);
-}
-$setting-sprite-dimensions: true;

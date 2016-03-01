@@ -1,5 +1,11 @@
+#iPhone6  第三版改进 Ver2.1 2016.02.28
+*[改进详情](#改进详情)<br>
+<a href="#" name="改进详情"></a>
+*修改了背景的形状图层*
+*页面布局的优化*
+
+
 #iPhone6  第二版改进 Ver1.1 2015.11.24
-![Hawtim icon](/img/Small.jpg)
 ##目录
 *[背景介绍](#背景介绍)<br>
 *[项目介绍](#项目介绍)<br>
@@ -43,7 +49,7 @@ github项目主页:(无上传)
 ****
 欢迎指出该项目的各种问题，也希望能对初学者有一点点的帮助。Any question and suggestion would be better.THANKS A LOT!
 ****
-*Email:<vastifield@163.com>
+*Email:<hawtim_zhang@qq.com>
 
 *QQ:843823550
 
