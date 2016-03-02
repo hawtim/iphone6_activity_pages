@@ -3,9 +3,15 @@
 <a name="改进详情"></a>
 ##改进详情
 1.修改了背景的形状图层
+
 2.页面布局的优化
+
 3.Demo预览
-![Demo二维码，请用手机扫描]（./1456931561.png）
+
+![Demo二维码，请用手机扫描]
+
+（https://github.com/hawtim/iphone6_activity_pages/1456931561.png）
+
 [http://htmlpreview.github.io/?https://github.com/hawtim/iphone6_activity_pages/blob/master/index.html]
 
 #iPhone6  第二版改进 Ver1.1 2015.11.24
