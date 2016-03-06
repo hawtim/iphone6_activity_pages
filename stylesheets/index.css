@@ -303,7 +303,7 @@ body {
   background-color: #FFFFFF;
   border-top: 1px solid #CCC;
   border-bottom: 1px solid #CCC; }
-  .form-1 p.info {
+  .form-1 .info {
     display: inline-block;
     width: 70.31% 4.4rem;
     height: auto;

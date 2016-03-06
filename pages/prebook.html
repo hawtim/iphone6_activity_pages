@@ -26,17 +26,17 @@
         <!-- 基本信息表格 -->
         <form class="form-1" id="form1" action="#" onsubmit="return validate_form(this)" method="post">
             <!-- 输入姓名 -->
-            <p class="info" >姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</p>
+            <span class="info" >姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
             <!-- <span class="input-info"><em></em></span> -->
             <input id="username" type="text" name="usertext" onchange="return p_name()" onkeyup="value=value.replace(/[\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" value="" min="3" max="10" placeholder="请输入你的姓名">
             <i class="horizon-line"></i>
             <!-- 输入身份证号 -->
-            <p class="info"  >身份证号</p>
+            <span class="info"  >身份证号</span>
             <!-- <span class="input-info"><em></em></span> -->
             <input id="idcode" type="text" onchange="return IdentityCodeValid(code) "onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" name="id" value="" min="15" max="18" placeholder="请输入你的身份证号" value="">
             <i class="horizon-line"></i>
             <!-- 输入联系电话 -->
-            <p class="info" >联系电话</p>
+            <span class="info" >联系电话</span>
             <!-- <span class="input-info"><em></em></span> -->
             <input id="phone" type="text" onchange="return validatemobile(mobile)" onKeyUp="value=value.replace(/\D/g,'')" onafterpaste="value=value.replace(/\D/g,'')" placeholder="请输入你的联系方式">
         </form>

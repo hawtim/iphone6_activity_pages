@@ -272,7 +272,7 @@ body{font-size: 1.6rem;}
 	margin: 0 auto;
 	background-color: $white;
 	@include border(1px solid #CCC, 1px solid #CCC);
-	p.info{
+	.info{
 	@include display(inline-block, 70.31% 4.4rem);
 	vertical-align: middle;
 	margin-left: 1.5rem;
