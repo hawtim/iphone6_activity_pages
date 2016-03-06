@@ -33,7 +33,7 @@ $yellow: #FFDE47;$green:#06BA04;$white:#FFFFFF;
 @mixin bg-shape{height:29.9rem;width:26.3rem;background-position: 0 -4.9rem;}
 
 // sass混合
-@mixin wrapper{position:relative;width:100%;margin:0 auto;-webkit-box-sizing: border-box;box-sizing: border-box;background-color: #FFF;}
+@mixin wrapper{position:relative;width:100%;margin:0 auto;-webkit-box-sizing: border-box;box-sizing: border-box;background-color: #C6FFFC;}
 @mixin position($position:relative, $top:auto, $left:auto, $width:auto, $height:auto){
 	position: $position;top:$top;left:$left;height:$height;width:$width;
 }
