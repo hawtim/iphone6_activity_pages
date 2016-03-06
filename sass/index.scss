@@ -22,15 +22,15 @@ $yellow: #FFDE47;$green:#06BA04;$white:#FFFFFF;
 @import "compass/css3";
 @import "compass/utilities";
 // 雪碧图
-@mixin img-shapes{background:url(../images/share/img-shapes.png) no-repeat;background-size:26.3rem 34.9rem }
+@mixin img-shapes{background:url(../images/share/img-shapes.png) no-repeat;background-size:25.2rem 4.2rem; }
 @mixin ico-arrow{height:1.2rem;width:.8rem;background-position: 0 0;}
-@mixin flexble-arrow{height:1.3rem;width:.9rem;background-position: -1.7rem 0;}
-@mixin hook{height:1.6rem;width:2.1rem;background-position: -3.4rem 0;}
-@mixin dotbgsmall{height:2.4rem;width:2.6rem;background-position: -19.6rem 0;}
-@mixin telecom{height:1.5rem;width:5.2rem;background-position: -6.5rem 0;}
-@mixin wepay{height:1.4rem;width:7.0rem;background-position: -11.71rem 0;}
-@mixin tips{height:1.4rem;width:25.1rem;background-position: 0 -2.6rem;}
-@mixin bg-shape{height:29.9rem;width:26.3rem;background-position: 0 -4.9rem;}
+@mixin flexble-arrow{height:1.3rem;width:.9rem;background-position: -2.0rem 0;}
+@mixin hook{height:1.6rem;width:2.1rem;background-position: -3.9rem 0;}
+@mixin dotbgsmall{height:2.4rem;width:2.6rem;background-position: -7.4rem 0;}
+@mixin telecom{height:1.5rem;width:5.2rem;background-position: -11.2rem 0;}
+@mixin wepay{height:1.4rem;width:7.0rem;background-position: -17.4rem 0;}
+@mixin tips{height:1.4rem;width:25.1rem;background-position: 0 -2.8rem;}
+
 
 // sass混合
 @mixin wrapper{position:relative;width:100%;margin:0 auto;-webkit-box-sizing: border-box;box-sizing: border-box;background-color: #C6FFFC;}
@@ -208,7 +208,7 @@ body{font-size: 1.6rem;}
 /*!======活动说明模块=========*/
 .at-detail{
 	width:100%;
-	margin:5.4rem auto  0;
+	margin:5.4rem auto 0;
 	color:$white;
 	p{
 		display: block;
@@ -324,9 +324,9 @@ body{font-size: 1.6rem;}
 	height: 1.6rem;
 	line-height: 1.6rem;
 	/*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。*/
+	// @include img-shapes;
+	// @include ico-arrow;
 	background: transparent url(../images/share/ico-arrow.png) no-repeat 5.9rem center;
-
-	-webkit-background-size: .8rem;
 	background-size: .8rem;
 	text-indent: 1rem;
 }
@@ -361,17 +361,6 @@ body{font-size: 1.6rem;}
 		line-height: 1.6rem;
 		background: url(../images/share/ico-arrow.png) no-repeat 100% center;
 		background-size: .8rem auto;
-		/*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。 */
-		
-		// text-indent: 1rem;
-		// .ico-arrow{
-		// 	display: block;width: 0.8rem;height: 1.25rem;
-		// 	background: url(../images/share/ico-arrow.png) no-repeat 100% center;
-		// 	background-size: .8rem auto;
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left:0;
-		// }
 	}
 /*对select元素样式设置，主要在于隐藏select元素*/
 	select{

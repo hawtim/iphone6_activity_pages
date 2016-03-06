@@ -132,10 +132,10 @@ body {
   .logo .share-telecom {
     display: inline-block;
     background: url(../images/share/img-shapes.png) no-repeat;
-    background-size: 26.3rem 34.9rem;
+    background-size: 25.2rem 4.2rem;
     height: 1.5rem;
     width: 5.2rem;
-    background-position: -6.5rem 0; }
+    background-position: -11.2rem 0; }
   .logo .vertical-line {
     position: relative;
     top: -1px;
@@ -148,10 +148,10 @@ body {
     display: inline-block;
     margin-left: 0.6rem;
     background: url(../images/share/img-shapes.png) no-repeat;
-    background-size: 26.3rem 34.9rem;
+    background-size: 25.2rem 4.2rem;
     height: 1.4rem;
     width: 7.0rem;
-    background-position: -11.71rem 0; }
+    background-position: -17.4rem 0; }
 
 .main-shape {
   width: 100%; }
@@ -187,10 +187,10 @@ body {
     display: block;
     margin: 1.8rem auto 0;
     background: url(../images/share/img-shapes.png) no-repeat;
-    background-size: 26.3rem 34.9rem;
+    background-size: 25.2rem 4.2rem;
     height: 1.4rem;
     width: 25.1rem;
-    background-position: 0 -2.6rem; }
+    background-position: 0 -2.8rem; }
   .description .ico-arrow {
     display: block;
     position: relative;
@@ -200,10 +200,10 @@ body {
     width: 0.9rem;
     margin-left: 12.9rem;
     background: url(../images/share/img-shapes.png) no-repeat;
-    background-size: 26.3rem 34.9rem;
+    background-size: 25.2rem 4.2rem;
     height: 1.3rem;
     width: .9rem;
-    background-position: -1.7rem 0; }
+    background-position: -2.0rem 0; }
 
 /*!=====按钮模块======*/
 .at-button {
@@ -242,7 +242,7 @@ body {
 /*!======活动说明模块=========*/
 .at-detail {
   width: 100%;
-  margin: 5.4rem auto  0;
+  margin: 5.4rem auto 0;
   color: #FFFFFF; }
   .at-detail p {
     display: block;
@@ -354,7 +354,6 @@ body {
   line-height: 1.6rem;
   /*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。*/
   background: transparent url(../images/share/ico-arrow.png) no-repeat 5.9rem center;
-  -webkit-background-size: .8rem;
   background-size: .8rem;
   text-indent: 1rem; }
 
@@ -404,8 +403,7 @@ body {
     height: 1.6rem;
     line-height: 1.6rem;
     background: url(../images/share/ico-arrow.png) no-repeat 100% center;
-    background-size: .8rem auto;
-    /*背景色为白色，背景图为xxx，距离左边75px，然后水平居中。 */ }
+    background-size: .8rem auto; }
   .select-distinct select {
     position: absolute;
     top: 0rem;
