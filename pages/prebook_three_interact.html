@@ -26,37 +26,36 @@
         <!-- 基本信息表格 -->
         <form class="form-1" id="form1" action="#" onsubmit="return validate_form(this)" method="post">
             <!-- 输入姓名 -->
-            <p class="info" >姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</p>
+            <span class="info" >姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
             <!-- <span class="input-info"><em></em></span> -->
-            <input id="username" type="text" name="usertext" onchange="return p_name()" onkeyup="value=value.replace(/[\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" value="" min="3" max="10" placeholder="请输入你的姓名">
-            <i class="horizon-line"></i>
+            <input id="username" type="text" name="usertext" onchange="return p_name()" placeholder="请输入你的姓名">
+            <span class="horizon-line"></span>
             <!-- 输入身份证号 -->
-            <p class="info"  >身份证号</p>
+            <span class="info"  >身份证号</span>
             <!-- <span class="input-info"><em></em></span> -->
-            <input id="idcode" type="text" onchange="return IdentityCodeValid(code) "onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" name="id" value="" min="15" max="18" placeholder="请输入你的身份证号" value="">
-            <i class="horizon-line"></i>
+            <input id="idcode" type="text" onchange="return IdentityCodeValid(code) " placeholder="请输入你的身份证号" value="">
+            <span class="horizon-line"></span>
             <!-- 输入联系电话 -->
-            <p class="info" >联系电话</p>
+            <span class="info" >联系电话</span>
             <!-- <span class="input-info"><em></em></span> -->
             <input id="phone" type="text" onchange="return validatemobile(mobile)" onKeyUp="value=value.replace(/\D/g,'')" onafterpaste="value=value.replace(/\D/g,'')" placeholder="请输入你的联系方式">
         </form>
         <!-- 送货地址表格 -->
         <form class="form-2" id="form2" action="#" onsubmit="return validate_form(this)" method="post">
-            <a class="select-city" id="select-city">
-                <span class="cur-select-city">上海</span>
-                <select>
-                    <!-- option 本身没有触发事件 -->
-                    <option value="sh" selected="selected" >上海</option>
-                    <option value="bj">北京</option>
-                    <option value="sz" >深圳</option>
-                    <option value="gz">广州</option>
-                    <option value="zh">珠海</option>
-                </select>
-            </a>
-            <i class="vertical-line"></i>
-            <a class="select-distinct" id="select-distinct">
-                <span class="cur-select-distinct" style="display:block">崇明区</span><!-- <span class="ico-arrow"></span> -->
-                <select name="shanghai" id="sh" style="display:block">
+            <!-- <a class="select-city" id="select-city"> -->
+                <!-- <span class="cur-select-city">地级市</span> -->
+                <select class="css" id="s_province" name="s_province"></select>  
+            <!-- </a>
+            <a class="select-city" id="select-city"> -->
+                <!-- <span class="cur-select-city">地级市</span> -->
+                <select class="css" id="s_city" name="s_city"></select>
+           <!--  </a>
+            <span class="vertical-line"></span>
+            <a class="select-distinct" id="select-distinct"> -->
+                <!-- <span class="cur-select-distinct" style="display:block">市、县级市</span> -->
+                <!-- <span class="ico-arrow"></span> -->
+                <select class="css" id="s_county" name="s_county"></select>
+               <!--  <select name="shanghai" id="sh" style="display:block">
                     <option value="cm">崇明区</option>
                     <option value="hp">黄浦区</option>
                     <option value="lw">卢湾区</option>
@@ -70,9 +69,10 @@
                     <option value="xh">罗湖区</option>
                     <option value="cn">盐田区</option>
                     <option value="cn">龙岗区</option>
-                </select>
-            </a>
-            <i class="form-2-horizon-line"></i>
+                </select>-->            
+                <!-- </a> -->
+            <span class="form-2-horizon-line"></span>
+
             <div class="particular-address" >
                 <input type="text"  id="address" onchange="return p_address()" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]/g,'')" placeholder="请输入详细的送货地址">
             </div>
@@ -88,6 +88,16 @@
         <span class="fix">&nbsp;</span>
     </div>
 <script src="../javascripts/page2certificate.js"></script>
-<script src="../javascripts//select.js"></script>
+<script src="../javascripts/select.js"></script>
+<script class="resources library" src="../javascripts/area.js" ></script>
+<script >_init_area();</script>
+<div id="show"></div>
+<script >
+var Gid  = document.getElementById ;
+var showArea = function(){
+    Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + Gid('s_city').value + " - 县/区" + Gid('s_county').value + "</h3>"
+                            }
+Gid('s_county').setAttribute('onchange','showArea()');
+</script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+// iphone6活动页面scss
 @charset "UTF-8";
  /*================== 样式重置 ======================== */
 body,p,ul,ol,li,h1,h2,h3,dl,dt,dd{margin:0;padding:0;}
@@ -15,6 +16,7 @@ a,button,input{-webkit-tap-highlight-color:rgba(0,0,0,0);}
 html,body{width: 100%;height:100%;}
 a{text-decoration:none;}
 a:hover{text-decoration:none;}
+.css{-webkit-appearance:none;border-left:0;border-top:0;border-right:0;border-bottom:.1*0.5rem;}
 /*！====以上是reset样式======*/
 $yellow: #FFDE47;$green:#06BA04;$white:#FFFFFF;
 @import "compass/css3";
@@ -26,7 +28,7 @@ $yellow: #FFDE47;$green:#06BA04;$white:#FFFFFF;
 @mixin hook{height:1.6rem;width:2.1rem;background-position: -3.4rem 0;}
 @mixin dotbgsmall{height:2.4rem;width:2.6rem;background-position: -19.6rem 0;}
 @mixin telecom{height:1.5rem;width:5.2rem;background-position: -6.5rem 0;}
-@mixin wepay{height:1.4rem;width:7.0rem;background-position: -11.8rem 0;}
+@mixin wepay{height:1.4rem;width:7.0rem;background-position: -11.71rem 0;}
 @mixin tips{height:1.4rem;width:25.1rem;background-position: 0 -2.6rem;}
 @mixin bg-shape{height:29.9rem;width:26.3rem;background-position: 0 -4.9rem;}
 
@@ -151,7 +153,7 @@ body{font-size: 1.6rem;}
 		@include img-shapes;
 		@include tips;
 	}
-	.share-flexible-arrow{
+	.ico-arrow{
 		display: block;
 		@include position(relative,-0.5rem,50%,.9rem,1.4rem);
 		margin-left:12.9rem;
@@ -208,15 +210,14 @@ body{font-size: 1.6rem;}
 	width:100%;
 	margin:5.4rem auto  0;
 	color:$white;
-	.at-detail-title{
+	p{
 		display: block;
 		margin-left:1.5rem;
 		font-size: 1.4rem;
 	}
-	.at-detail-des{
+	ol{
 		font-size: 1.3rem;
-		@include display(block, 100%, 31.2rem);
-		//295px,
+		@include display(block, 100%, 31.2rem);//295px,
 		margin-left: 1.5rem;
 	}
 	li{
@@ -231,7 +232,7 @@ body{font-size: 1.6rem;}
 	li:nth-of-type(6){
 		padding-bottom: 4.1rem;
 	}
-	li .list-style{
+	.ls{
 		@include display(inline-block, auto, auto);
 		padding-right:.3rem;
 	}
@@ -240,17 +241,12 @@ body{font-size: 1.6rem;}
 
 
 
-
-
-
-
-
-
-
 /*! =================页面2 prebook.html CSS样式==========================*/
 /*!====1.身份证号和手机号要用js进行验证========2.选择城市的js代码暂时还不会使用=====*/
 .wrapper-2{
 	@include wrapper;
+	width:100%;
+	height: 100%;
 	background:transparent url(../images/share/dotbgsmall.png) 0 0  repeat;
 	background-size: 2.6rem 2.4rem;
 	font-size:1.3rem;
@@ -276,7 +272,7 @@ body{font-size: 1.6rem;}
 	margin: 0 auto;
 	background-color: $white;
 	@include border(1px solid #CCC, 1px solid #CCC);
-	.info{
+	p.info{
 	@include display(inline-block, 70.31% 4.4rem);
 	vertical-align: middle;
 	margin-left: 1.5rem;
@@ -448,11 +444,12 @@ body{font-size: 1.6rem;}
 
 .wrapper-3{
 	@include wrapper;
+	width:100%;
+	height: 100%;
 	background:transparent url(../images/share/dotbgsmall.png) 0 0  repeat;
 	padding-top:1.7rem;
 	background-size: 2.6rem 2.4rem;
 	font-size: 1.2rem;
-	overflow:hidden;
 }
 .success{
 	// @include position(relative, 17px, 0px, 320px, 412px);
@@ -614,7 +611,12 @@ body{font-size: 1.6rem;}
 	background-color:#06BE04;
 }
 .btn{
-	padding-bottom: 1.6rem;
+	width: 100%;
+	height: 10rem;
+	padding-top:1.5rem; 
+	box-sizing:border-box;
+	background:transparent url(../images/share/dotbgsmall.png) 0 0  repeat;
+	background-size: 2.6rem 2.4rem;
 }
 .confirm-btn-3{
 	// @include position(relative, 35px, auto, 293px, 40px);
@@ -623,7 +625,7 @@ body{font-size: 1.6rem;}
 	font-size: 1.8rem;
 	color: white;
 	line-height: 4.0rem;
-	margin: 1.8rem auto 0;
+	margin: 0.3rem auto 10%;
 	text-align: center;
 	border:1px solid #1A9D18;
 	background-image: -webkit-gradient(linear, left top, left bottom,
