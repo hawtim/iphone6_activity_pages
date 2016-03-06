@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h2>iPhone6  第三版改进 Ver2.1 2016.02.28</h2>
 <a name="改进详情"></a>
 <h3>改进详情</h3>
@@ -11,7 +10,6 @@
 <p><img src= "https://raw.githubusercontent.com/hawtim/iphone6_activity_pages/master/1456931561.png" width="200" height="200"></p>
 - - -
 <h2>iPhone6  第二版改进 Ver1.1 2015.11.24</h2>
->>>>>>> 4146d905c8e53671e4aa1429283f691c84b59b8c
 ##目录
 [项目介绍](#项目介绍)<br>
 [使用说明](#使用说明)<br>
